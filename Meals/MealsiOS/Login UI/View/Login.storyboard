@@ -56,6 +56,20 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="grf-AO-lyx" userLabel="Error Message">
+                                        <rect key="frame" x="16" y="316.66666666666669" width="361" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rkc-rV-c3q" userLabel="Loading Container">
+                                        <rect key="frame" x="176.66666666666666" y="260.66666666666669" width="40" height="40"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="jnY-Cn-bzE"/>
+                                            <constraint firstAttribute="height" constant="40" id="n1w-tI-nvS"/>
+                                        </constraints>
+                                    </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="VJh-iw-AdF" userLabel="Registration Container">
                                         <rect key="frame" x="91.333333333333329" y="332.66666666666669" width="210.33333333333337" height="30"/>
                                         <subviews>
@@ -77,14 +91,6 @@
                                             <constraint firstItem="NMq-BW-k3Z" firstAttribute="centerY" secondItem="VJh-iw-AdF" secondAttribute="centerY" id="x2M-Wf-Bl3"/>
                                         </constraints>
                                     </stackView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rkc-rV-c3q" userLabel="Loading Container">
-                                        <rect key="frame" x="176.66666666666666" y="260.66666666666669" width="40" height="40"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="jnY-Cn-bzE"/>
-                                            <constraint firstAttribute="height" constant="40" id="n1w-tI-nvS"/>
-                                        </constraints>
-                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -92,15 +98,18 @@
                                     <constraint firstItem="rkc-rV-c3q" firstAttribute="centerX" secondItem="Pie-AM-h8C" secondAttribute="centerX" id="3MZ-TP-MHw"/>
                                     <constraint firstItem="mR5-eA-IQ5" firstAttribute="leading" secondItem="Pie-AM-h8C" secondAttribute="leadingMargin" constant="16" id="4AV-Gn-coh"/>
                                     <constraint firstItem="SPc-xB-TB1" firstAttribute="top" secondItem="Pie-AM-h8C" secondAttribute="top" constant="50" id="56i-zT-zux"/>
-                                    <constraint firstItem="VJh-iw-AdF" firstAttribute="top" secondItem="mR5-eA-IQ5" secondAttribute="bottom" constant="32" id="6aR-I6-vUc"/>
                                     <constraint firstItem="SPc-xB-TB1" firstAttribute="leading" secondItem="Pie-AM-h8C" secondAttribute="leadingMargin" constant="16" id="AVr-XD-mvH"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="Npx-MO-dRi" secondAttribute="trailing" constant="16" id="CJU-xw-TTx"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="SPc-xB-TB1" secondAttribute="trailing" constant="16" id="Fh4-AE-vcL"/>
+                                    <constraint firstItem="VJh-iw-AdF" firstAttribute="top" secondItem="grf-AO-lyx" secondAttribute="bottom" constant="16" id="Ty8-sW-ZNu"/>
                                     <constraint firstItem="VJh-iw-AdF" firstAttribute="centerX" secondItem="Pie-AM-h8C" secondAttribute="centerX" id="cI7-5W-zau"/>
                                     <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="VJh-iw-AdF" secondAttribute="trailing" priority="999" constant="16" id="cxZ-OH-3Ak"/>
                                     <constraint firstItem="VJh-iw-AdF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Pie-AM-h8C" secondAttribute="leadingMargin" priority="999" constant="16" id="dZ1-2N-Nle"/>
                                     <constraint firstItem="Npx-MO-dRi" firstAttribute="top" secondItem="SPc-xB-TB1" secondAttribute="bottom" constant="50" id="htj-x3-QFx"/>
                                     <constraint firstItem="mR5-eA-IQ5" firstAttribute="top" secondItem="Npx-MO-dRi" secondAttribute="bottom" constant="32" id="hzl-j1-qsX"/>
+                                    <constraint firstAttribute="trailing" secondItem="grf-AO-lyx" secondAttribute="trailing" constant="16" id="jDl-cY-xYE"/>
+                                    <constraint firstItem="grf-AO-lyx" firstAttribute="leading" secondItem="Pie-AM-h8C" secondAttribute="leading" constant="16" id="oia-by-xDM"/>
+                                    <constraint firstItem="grf-AO-lyx" firstAttribute="top" secondItem="mR5-eA-IQ5" secondAttribute="bottom" constant="16" id="wsB-sK-Wdv"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="mR5-eA-IQ5" secondAttribute="trailing" constant="16" id="yPo-SM-FeH"/>
                                     <constraint firstItem="Npx-MO-dRi" firstAttribute="leading" secondItem="Pie-AM-h8C" secondAttribute="leadingMargin" constant="16" id="z6B-Do-5rR"/>
                                 </constraints>
@@ -116,6 +125,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="errorMessageLabel" destination="grf-AO-lyx" id="BLh-oV-923"/>
                         <outlet property="loadingContainer" destination="rkc-rV-c3q" id="bYC-lB-yqL"/>
                         <outlet property="loginButton" destination="mR5-eA-IQ5" id="GuQ-TE-p13"/>
                         <outlet property="passwordField" destination="JbG-fY-nkW" id="6Mv-Gg-iVk"/>
@@ -134,6 +144,9 @@
         </systemColor>
         <systemColor name="systemCyanColor">
             <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>

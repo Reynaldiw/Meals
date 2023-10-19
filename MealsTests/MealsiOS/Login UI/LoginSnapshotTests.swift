@@ -38,6 +38,14 @@ final class LoginSnapshotTests: XCTestCase {
         assert(snapshot: sut.snapshot(configuration: .iPhone13(style: .light)), named: "LOGIN_LOADING_light")
     }
     
+    func test_loginWithErrorMessage() {
+        let sut = makeSUT()
+        sut.fillFields(withUsername: "Test username", andPassword: "test password")
+        sut.showErrorMessage("This is an error message")
+        
+        assert(snapshot: sut.snapshot(configuration: .iPhone13(style: .light)), named: "LOGIN_ERROR_MESSAGE_light")
+    }
+    
     //MARK: - Helpers
     
     private func makeSUT() -> LoginViewController {
@@ -60,5 +68,9 @@ private extension LoginViewController {
     
     func showLoading() {
         isLoading = true
+    }
+    
+    func showErrorMessage(_ message: String) {
+        errorMessage = message
     }
 }

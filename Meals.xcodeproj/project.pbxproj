@@ -17,6 +17,7 @@
 		E17C0CDE2AE1205C005AAF2F /* XCTestCase+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17C0CDD2AE1205C005AAF2F /* XCTestCase+Snapshot.swift */; };
 		E17C0CE02AE12087005AAF2F /* UIViewController+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17C0CDF2AE12087005AAF2F /* UIViewController+Snapshot.swift */; };
 		E18F14BB2AE1B90700163139 /* AuthenticateUserAccountStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F14BA2AE1B90700163139 /* AuthenticateUserAccountStore.swift */; };
+		E18F14C12AE1B9F700163139 /* KeychainAuthenticateUserAccountStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F14C02AE1B9F700163139 /* KeychainAuthenticateUserAccountStoreTests.swift */; };
 		E1A5020A2AE12B160049C49E /* LoginViewController+SnapshotHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A502092AE12B160049C49E /* LoginViewController+SnapshotHelpers.swift */; };
 		E1A5020E2AE12C3B0049C49E /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1A5020D2AE12C3B0049C49E /* Registration.storyboard */; };
 		E1A502112AE12CFE0049C49E /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A502102AE12CFE0049C49E /* RegistrationViewController.swift */; };
@@ -56,6 +57,7 @@
 		E17C0CDD2AE1205C005AAF2F /* XCTestCase+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Snapshot.swift"; sourceTree = "<group>"; };
 		E17C0CDF2AE12087005AAF2F /* UIViewController+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Snapshot.swift"; sourceTree = "<group>"; };
 		E18F14BA2AE1B90700163139 /* AuthenticateUserAccountStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateUserAccountStore.swift; sourceTree = "<group>"; };
+		E18F14C02AE1B9F700163139 /* KeychainAuthenticateUserAccountStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainAuthenticateUserAccountStoreTests.swift; sourceTree = "<group>"; };
 		E1A502092AE12B160049C49E /* LoginViewController+SnapshotHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+SnapshotHelpers.swift"; sourceTree = "<group>"; };
 		E1A5020D2AE12C3B0049C49E /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 		E1A502102AE12CFE0049C49E /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
@@ -192,6 +194,14 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		E18F14BD2AE1B9AF00163139 /* Store Infra */ = {
+			isa = PBXGroup;
+			children = (
+				E18F14C02AE1B9F700163139 /* KeychainAuthenticateUserAccountStoreTests.swift */,
+			);
+			path = "Store Infra";
+			sourceTree = "<group>";
+		};
 		E1A502082AE12AE40049C49E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,6 +333,7 @@
 		E1C482D92AE18A1D0010E598 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				E18F14BD2AE1B9AF00163139 /* Store Infra */,
 				E1C482E02AE197860010E598 /* AuthenticateUserAccountMapperTests.swift */,
 			);
 			path = Login;
@@ -458,6 +469,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E18F14C12AE1B9F700163139 /* KeychainAuthenticateUserAccountStoreTests.swift in Sources */,
 				E1A502142AE1468C0049C49E /* RegistrationSnapshotTests.swift in Sources */,
 				E1A502172AE14B910049C49E /* RegistrationViewController+SnapshotHelpers.swift in Sources */,
 				E1A5020A2AE12B160049C49E /* LoginViewController+SnapshotHelpers.swift in Sources */,

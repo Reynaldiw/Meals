@@ -30,6 +30,14 @@ final class RegistrationSnapshotTests: XCTestCase {
         assert(snapshot: sut.snapshot(configuration: .iPhone13(style: .light)), named: "REGISTRATION_REQUIRED_FIELDS_FILLED_light")
     }
     
+    func test_registrationWithLoading() {
+        let sut = makeSUT()
+        sut.fillAllRequiredFields(true)
+        sut.showLoading()
+        
+        assert(snapshot: sut.snapshot(configuration: .iPhone13(style: .light)), named: "REGISTRATION_LOADING_light")
+    }
+    
     //MARK: - Helpers
     
     private func makeSUT() -> RegistrationViewController {
@@ -52,5 +60,9 @@ private extension RegistrationViewController {
         }
         
         textFieldDidChangeSelection(fullnameField)
+    }
+    
+    func showLoading() {
+        isLoading = true
     }
 }

@@ -34,6 +34,10 @@ struct RegistrationUserAccount {
 
 final class RegistrationUserAccountService {
     
+    enum Error: Swift.Error {
+        case usernameAlreadyTaken
+    }
+    
     private let store: UserAccountStore
     private let userAccountID: () -> UUID
     private let userAccountCreatedAt: () -> Date
@@ -49,14 +53,14 @@ final class RegistrationUserAccountService {
             let cachedUserAccounts = try store.retrieve()
             let isValid = cachedUserAccounts.filter { $0.username.lowercased() == userAccount.username.lowercased() }.isEmpty == true
             
-            if isValid {
-                try store.insert(StoredUserAccount(
-                    id: userAccountID(),
-                    fullname: userAccount.fullname,
-                    username: userAccount.username,
-                    password: userAccount.password,
-                    createdAt: userAccountCreatedAt()))
-            }
+            guard isValid else { throw Error.usernameAlreadyTaken }
+            
+            try store.insert(StoredUserAccount(
+                id: userAccountID(),
+                fullname: userAccount.fullname,
+                username: userAccount.username,
+                password: userAccount.password,
+                createdAt: userAccountCreatedAt()))
             
         } catch {
             throw error
@@ -116,6 +120,15 @@ final class CacheUserAccountUseCaseTests: XCTestCase {
         store.completeRetrieval(with: retrievalError)
         
         XCTAssertThrowsError(try sut.register(userAccount), "Should throw error when request retrieval got error")
+    }
+    
+    func test_register_deliversErrorOnNonValidUserAccount() {
+        let userAccount = uniqueUser()
+        let (sut, store) = makeSUT()
+
+        store.completeRetrieval(with: [userAccount.stored])
+        
+        XCTAssertThrowsError(try sut.register(userAccount.registration), "Should throw error when request retrieval succeed but got non valid user account")
     }
     
     //MARK: - Helpers

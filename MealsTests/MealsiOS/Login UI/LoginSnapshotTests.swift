@@ -57,20 +57,3 @@ final class LoginSnapshotTests: XCTestCase {
         return controller
     }
 }
-
-private extension LoginViewController {
-    func fillFields(withUsername username: String?, andPassword password: String?) {
-        usernameField.text = username
-        passwordField.text = password
-        textFieldDidChangeSelection(usernameField)
-        textFieldDidChangeSelection(passwordField)
-    }
-    
-    func showLoading() {
-        isLoading = true
-    }
-    
-    func showErrorMessage(_ message: String) {
-        errorMessage = message
-    }
-}

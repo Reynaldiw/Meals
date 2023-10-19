@@ -23,6 +23,8 @@
 		E1A502172AE14B910049C49E /* RegistrationViewController+SnapshotHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A502162AE14B910049C49E /* RegistrationViewController+SnapshotHelpers.swift */; };
 		E1A5021F2AE152070049C49E /* CacheUserAccountUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A5021E2AE152070049C49E /* CacheUserAccountUseCaseTests.swift */; };
 		E1C482C92AE185F90010E598 /* RegistrationUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C482C82AE185F90010E598 /* RegistrationUserAccount.swift */; };
+		E1C482CD2AE186910010E598 /* UserAccountStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C482CC2AE186910010E598 /* UserAccountStore.swift */; };
+		E1C482CF2AE186A80010E598 /* StoredUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C482CE2AE186A80010E598 /* StoredUserAccount.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		E1A502162AE14B910049C49E /* RegistrationViewController+SnapshotHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegistrationViewController+SnapshotHelpers.swift"; sourceTree = "<group>"; };
 		E1A5021E2AE152070049C49E /* CacheUserAccountUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheUserAccountUseCaseTests.swift; sourceTree = "<group>"; };
 		E1C482C82AE185F90010E598 /* RegistrationUserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUserAccount.swift; sourceTree = "<group>"; };
+		E1C482CC2AE186910010E598 /* UserAccountStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountStore.swift; sourceTree = "<group>"; };
+		E1C482CE2AE186A80010E598 /* StoredUserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoredUserAccount.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +251,7 @@
 		E1C482C52AE185D10010E598 /* MealsAuthentication */ = {
 			isa = PBXGroup;
 			children = (
+				E1C482CB2AE186820010E598 /* Shared Store */,
 				E1C482C62AE185DB0010E598 /* Registration */,
 			);
 			path = MealsAuthentication;
@@ -266,6 +271,15 @@
 				E1C482C82AE185F90010E598 /* RegistrationUserAccount.swift */,
 			);
 			path = Feature;
+			sourceTree = "<group>";
+		};
+		E1C482CB2AE186820010E598 /* Shared Store */ = {
+			isa = PBXGroup;
+			children = (
+				E1C482CC2AE186910010E598 /* UserAccountStore.swift */,
+				E1C482CE2AE186A80010E598 /* StoredUserAccount.swift */,
+			);
+			path = "Shared Store";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,9 +386,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E17C0CCA2AE111AA005AAF2F /* LoginViewController.swift in Sources */,
+				E1C482CF2AE186A80010E598 /* StoredUserAccount.swift in Sources */,
 				E17C0CAF2AE0E91B005AAF2F /* AppDelegate.swift in Sources */,
 				E1C482C92AE185F90010E598 /* RegistrationUserAccount.swift in Sources */,
 				E1A502112AE12CFE0049C49E /* RegistrationViewController.swift in Sources */,
+				E1C482CD2AE186910010E598 /* UserAccountStore.swift in Sources */,
 				E17C0CB12AE0E91B005AAF2F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

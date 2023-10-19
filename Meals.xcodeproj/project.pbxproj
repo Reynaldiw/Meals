@@ -13,7 +13,20 @@
 		E17C0CBB2AE0E91C005AAF2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E17C0CB92AE0E91C005AAF2F /* LaunchScreen.storyboard */; };
 		E17C0CC72AE0F228005AAF2F /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E17C0CC62AE0F228005AAF2F /* Login.storyboard */; };
 		E17C0CCA2AE111AA005AAF2F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17C0CC92AE111AA005AAF2F /* LoginViewController.swift */; };
+		E17C0CDB2AE1201A005AAF2F /* LoginSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17C0CDA2AE1201A005AAF2F /* LoginSnapshotTests.swift */; };
+		E17C0CDE2AE1205C005AAF2F /* XCTestCase+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17C0CDD2AE1205C005AAF2F /* XCTestCase+Snapshot.swift */; };
+		E17C0CE02AE12087005AAF2F /* UIViewController+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17C0CDF2AE12087005AAF2F /* UIViewController+Snapshot.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E17C0CD32AE11FA0005AAF2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E17C0CA32AE0E91B005AAF2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E17C0CAA2AE0E91B005AAF2F;
+			remoteInfo = Meals;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		E17C0CAB2AE0E91B005AAF2F /* Meals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meals.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +37,21 @@
 		E17C0CBC2AE0E91C005AAF2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E17C0CC62AE0F228005AAF2F /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		E17C0CC92AE111AA005AAF2F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E17C0CCF2AE11FA0005AAF2F /* MealsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MealsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E17C0CDA2AE1201A005AAF2F /* LoginSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSnapshotTests.swift; sourceTree = "<group>"; };
+		E17C0CDD2AE1205C005AAF2F /* XCTestCase+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Snapshot.swift"; sourceTree = "<group>"; };
+		E17C0CDF2AE12087005AAF2F /* UIViewController+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Snapshot.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		E17C0CA82AE0E91B005AAF2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E17C0CCC2AE11FA0005AAF2F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				E17C0CAD2AE0E91B005AAF2F /* Meals */,
+				E17C0CD02AE11FA0005AAF2F /* MealsTests */,
 				E17C0CAC2AE0E91B005AAF2F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				E17C0CAB2AE0E91B005AAF2F /* Meals.app */,
+				E17C0CCF2AE11FA0005AAF2F /* MealsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,6 +125,40 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		E17C0CD02AE11FA0005AAF2F /* MealsTests */ = {
+			isa = PBXGroup;
+			children = (
+				E17C0CD82AE11FBD005AAF2F /* MealsiOS */,
+			);
+			path = MealsTests;
+			sourceTree = "<group>";
+		};
+		E17C0CD82AE11FBD005AAF2F /* MealsiOS */ = {
+			isa = PBXGroup;
+			children = (
+				E17C0CDC2AE12041005AAF2F /* Helpers */,
+				E17C0CD92AE11FED005AAF2F /* Login UI */,
+			);
+			path = MealsiOS;
+			sourceTree = "<group>";
+		};
+		E17C0CD92AE11FED005AAF2F /* Login UI */ = {
+			isa = PBXGroup;
+			children = (
+				E17C0CDA2AE1201A005AAF2F /* LoginSnapshotTests.swift */,
+			);
+			path = "Login UI";
+			sourceTree = "<group>";
+		};
+		E17C0CDC2AE12041005AAF2F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E17C0CDD2AE1205C005AAF2F /* XCTestCase+Snapshot.swift */,
+				E17C0CDF2AE12087005AAF2F /* UIViewController+Snapshot.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,6 +179,24 @@
 			productReference = E17C0CAB2AE0E91B005AAF2F /* Meals.app */;
 			productType = "com.apple.product-type.application";
 		};
+		E17C0CCE2AE11FA0005AAF2F /* MealsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E17C0CD52AE11FA0005AAF2F /* Build configuration list for PBXNativeTarget "MealsTests" */;
+			buildPhases = (
+				E17C0CCB2AE11FA0005AAF2F /* Sources */,
+				E17C0CCC2AE11FA0005AAF2F /* Frameworks */,
+				E17C0CCD2AE11FA0005AAF2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E17C0CD42AE11FA0005AAF2F /* PBXTargetDependency */,
+			);
+			name = MealsTests;
+			productName = MealsTests;
+			productReference = E17C0CCF2AE11FA0005AAF2F /* MealsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -131,6 +209,11 @@
 				TargetAttributes = {
 					E17C0CAA2AE0E91B005AAF2F = {
 						CreatedOnToolsVersion = 14.3;
+					};
+					E17C0CCE2AE11FA0005AAF2F = {
+						CreatedOnToolsVersion = 14.3;
+						LastSwiftMigration = 1430;
+						TestTargetID = E17C0CAA2AE0E91B005AAF2F;
 					};
 				};
 			};
@@ -148,6 +231,7 @@
 			projectRoot = "";
 			targets = (
 				E17C0CAA2AE0E91B005AAF2F /* Meals */,
+				E17C0CCE2AE11FA0005AAF2F /* MealsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -160,6 +244,13 @@
 				E17C0CBB2AE0E91C005AAF2F /* LaunchScreen.storyboard in Resources */,
 				E17C0CB82AE0E91C005AAF2F /* Assets.xcassets in Resources */,
 				E17C0CC72AE0F228005AAF2F /* Login.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E17C0CCD2AE11FA0005AAF2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,7 +267,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E17C0CCB2AE11FA0005AAF2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E17C0CDE2AE1205C005AAF2F /* XCTestCase+Snapshot.swift in Sources */,
+				E17C0CE02AE12087005AAF2F /* UIViewController+Snapshot.swift in Sources */,
+				E17C0CDB2AE1201A005AAF2F /* LoginSnapshotTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E17C0CD42AE11FA0005AAF2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E17C0CAA2AE0E91B005AAF2F /* Meals */;
+			targetProxy = E17C0CD32AE11FA0005AAF2F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E17C0CB92AE0E91C005AAF2F /* LaunchScreen.storyboard */ = {
@@ -358,6 +467,43 @@
 			};
 			name = Release;
 		};
+		E17C0CD62AE11FA0005AAF2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.reynaldiwijaya.MealsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Meals.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Meals";
+			};
+			name = Debug;
+		};
+		E17C0CD72AE11FA0005AAF2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.reynaldiwijaya.MealsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Meals.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Meals";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -375,6 +521,15 @@
 			buildConfigurations = (
 				E17C0CC02AE0E91C005AAF2F /* Debug */,
 				E17C0CC12AE0E91C005AAF2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E17C0CD52AE11FA0005AAF2F /* Build configuration list for PBXNativeTarget "MealsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E17C0CD62AE11FA0005AAF2F /* Debug */,
+				E17C0CD72AE11FA0005AAF2F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

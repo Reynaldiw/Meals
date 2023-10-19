@@ -17,5 +17,17 @@ public final class LoginViewController: UIViewController {
 
     public override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configureInitialUI()
+    }
+    
+    private func configureInitialUI() {
+        loadingContainer.isHidden = true
+        updateLoginButtonUIState(isEnable: false)
+    }
+    
+    private func updateLoginButtonUIState(isEnable: Bool) {
+        loginButton.isEnabled = isEnable
+        loginButton.layer.opacity = isEnable ? 1.0 : 0.5
     }
 }

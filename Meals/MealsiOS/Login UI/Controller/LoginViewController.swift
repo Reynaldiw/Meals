@@ -30,8 +30,15 @@ public final class LoginViewController: UIViewController {
         loginButton.isEnabled = isEnable
         loginButton.layer.opacity = isEnable ? 1.0 : 0.5
     }
+    
+    private func extractLoginFieldsValue() -> (username: String?, password: String?) {
+        return (usernameField.text, passwordField.text)
+    }
 }
 
 extension LoginViewController: UITextFieldDelegate {
-    public func textFieldDidChangeSelection(_ textField: UITextField) {}
+    public func textFieldDidChangeSelection(_ textField: UITextField) {
+        let (username, password) = extractLoginFieldsValue()
+        updateLoginButtonUIState(isEnable: username?.isEmpty == false && password?.isEmpty == false)
+    }
 }

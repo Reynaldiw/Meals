@@ -30,6 +30,14 @@ final class LoginSnapshotTests: XCTestCase {
         assert(snapshot: sut.snapshot(configuration: .iPhone13(style: .light)), named: "LOGIN_FIELDS_FILLED_light")
     }
     
+    func test_withAllRequiredFieldsIsFilled_loginWithLoading() {
+        let sut = makeSUT()
+        sut.fillFields(withUsername: "Test username", andPassword: "test password")
+        sut.showLoading()
+        
+        assert(snapshot: sut.snapshot(configuration: .iPhone13(style: .light)), named: "LOGIN_LOADING_light")
+    }
+    
     //MARK: - Helpers
     
     private func makeSUT() -> LoginViewController {
@@ -48,5 +56,9 @@ private extension LoginViewController {
         passwordField.text = password
         textFieldDidChangeSelection(usernameField)
         textFieldDidChangeSelection(passwordField)
+    }
+    
+    func showLoading() {
+        isLoading = true
     }
 }

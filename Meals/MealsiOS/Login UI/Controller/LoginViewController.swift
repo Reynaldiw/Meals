@@ -12,6 +12,7 @@ public final class LoginViewController: UIViewController {
     @IBOutlet private(set) public var usernameField: UITextField!
     @IBOutlet private(set) public var passwordField: UITextField!
     @IBOutlet private(set) public var loginButton: UIButton!
+    @IBOutlet private(set) public var errorMessageLabel: UILabel!
     @IBOutlet private(set) public var signUpButton: UIButton!
     @IBOutlet private(set) public var loadingContainer: UIView!
     
@@ -36,6 +37,13 @@ public final class LoginViewController: UIViewController {
             newValue ? spinner.startAnimating() : spinner.stopAnimating()
         }
     }
+    
+    public var errorMessage: String? = nil {
+        didSet {
+            errorMessageLabel.isHidden = errorMessage == nil
+            errorMessageLabel.text = errorMessage
+        }
+    }
 
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +54,7 @@ public final class LoginViewController: UIViewController {
     private func configureInitialUI() {
         loadingContainer.isHidden = true
         updateLoginButtonUIState(isEnable: false)
+        errorMessageLabel.isHidden = true
     }
     
     private func updateLoginButtonUIState(isEnable: Bool) {

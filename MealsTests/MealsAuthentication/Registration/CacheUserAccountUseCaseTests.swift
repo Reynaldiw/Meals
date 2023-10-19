@@ -113,44 +113,45 @@ final class CacheUserAccountUseCaseTests: XCTestCase {
     }
     
     func test_register_deliversErrorOnRetrievalError() {
-        let userAccount = uniqueUser().registration
-        let retrievalError = NSError(domain: "any-error", code: 0)
+        let retrievalError = anyNSError()
         let (sut, store) = makeSUT()
         
-        store.completeRetrieval(with: retrievalError)
-        
-        XCTAssertThrowsError(try sut.register(userAccount), "Should throw error when request retrieval got error")
+        expect(sut, toCompleteWithError: retrievalError, when: {
+            store.completeRetrieval(with: retrievalError)
+        })
     }
     
     func test_register_deliversErrorOnNonValidUserAccount() {
-        let userAccount = uniqueUser()
         let (sut, store) = makeSUT()
 
-        store.completeRetrieval(with: [userAccount.stored])
-        
-        XCTAssertThrowsError(try sut.register(userAccount.registration), "Should throw error when request retrieval succeed but got non valid user account")
+        expect(sut, toCompleteWithError: RegistrationUserAccountService.Error.usernameAlreadyTaken as NSError, when: {
+            store.completeRetrieval(with: [uniqueUser().stored])
+        })
     }
     
     func test_register_deliversErrorOnInsertionError() {
-        let userAccount = uniqueUser()
-        let insertionError = NSError(domain: "any-error", code: 0)
+        let insertionError = anyNSError()
         let (sut, store) = makeSUT()
         
-        store.completeRetrieval(with: [])
-        store.completeInsertion(with: insertionError)
-        
-        XCTAssertThrowsError(try sut.register(userAccount.registration), "Should throw error when request retrieval succeed and valid user account but got error on insertion")
+        expect(sut, toCompleteWithError: insertionError, when: {
+            let cacheUserAccount = StoredUserAccount(
+                id: UUID(),
+                fullname: "another fullname",
+                username: "another username",
+                password: "another password",
+                createdAt: Date())
+            store.completeRetrieval(with: [cacheUserAccount])
+            store.completeInsertion(with: insertionError)
+        })
     }
     
     func test_register_succeedsOnSuccessfulCacheInsertion() {
-        let userAccount = uniqueUser()
-        let insertionError = NSError(domain: "any-error", code: 0)
         let (sut, store) = makeSUT()
         
-        store.completeRetrieval(with: [])
-        store.completeInsertionSuccessfully()
-        
-        XCTAssertNoThrow(try sut.register(userAccount.registration))
+        expect(sut, toCompleteWithError: .none, when: {
+            store.completeRetrieval(with: [])
+            store.completeInsertionSuccessfully()
+        })
     }
     
     //MARK: - Helpers
@@ -164,10 +165,24 @@ final class CacheUserAccountUseCaseTests: XCTestCase {
         return (sut, store)
     }
     
+    private func expect(_ sut: RegistrationUserAccountService, toCompleteWithError expectedError: NSError?, when action: () -> Void, file: StaticString = #filePath, line: UInt = #line) {
+        action()
+        
+        do {
+            try sut.register(uniqueUser().registration)
+        } catch {
+            XCTAssertEqual(error as NSError, expectedError, file: file, line: line)
+        }
+    }
+    
     private func uniqueUser(id: UUID = UUID(), createdAt date: Date = Date()) -> (registration: RegistrationUserAccount, stored: StoredUserAccount) {
         let registrationUser = anyRegistrationUser()
         let storedUser = StoredUserAccount(id: id, fullname: registrationUser.fullname, username: registrationUser.username, password: registrationUser.password, createdAt: date)
         return (registrationUser, storedUser)
+    }
+    
+    func anyNSError() -> NSError {
+        return NSError(domain: "any error", code: 0)
     }
     
     private func anyRegistrationUser() -> RegistrationUserAccount {

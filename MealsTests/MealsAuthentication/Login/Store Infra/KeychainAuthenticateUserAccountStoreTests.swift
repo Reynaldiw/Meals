@@ -36,6 +36,7 @@ final class KeychainAuthenticateUserAccountStoreTests: XCTestCase {
     
     private func makeSUT(storeKey: String = "keychain.account.store.test.key") -> KeychainStore {
         let sut = KeychainStore(storeKey: storeKey)
+        trackForMemoryLeaks(sut)
         
         addTeardownBlock {
             try? KeychainStore(storeKey: storeKey).delete()

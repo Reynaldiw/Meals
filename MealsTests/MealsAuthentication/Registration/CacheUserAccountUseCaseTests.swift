@@ -98,10 +98,14 @@ final class CacheUserAccountUseCaseTests: XCTestCase {
     
     private func makeSUT(
         userAccountID: @escaping () -> UUID = UUID.init,
-        userAccountCreatedAt: @escaping () -> Date = Date.init
+        userAccountCreatedAt: @escaping () -> Date = Date.init,
+        file: StaticString = #filePath,
+        line: UInt = #line
     ) -> (sut: RegistrationUserAccountService, store: UserAccountStoreSpy) {
         let store = UserAccountStoreSpy()
         let sut = RegistrationUserAccountService(store: store, userAccountID: userAccountID, userAccountCreatedAt: userAccountCreatedAt)
+        trackForMemoryLeaks(store)
+        trackForMemoryLeaks(sut)
         return (sut, store)
     }
     

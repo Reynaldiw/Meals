@@ -7,13 +7,13 @@
 
 import Foundation
 
-public struct AuthenticateUserAccount {
+public struct AuthenticateUserAccount: Equatable {
     public let id: UUID
     public let fullname: String
     public let username: String
-    public let createdAt: String
+    public let createdAt: Date
     
-    public init(id: UUID, fullname: String, username: String, createdAt: String) {
+    public init(id: UUID, fullname: String, username: String, createdAt: Date) {
         self.id = id
         self.fullname = fullname
         self.username = username

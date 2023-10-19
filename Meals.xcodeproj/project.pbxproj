@@ -28,6 +28,7 @@
 		E1C482D22AE1872B0010E598 /* RegistrationUserAccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C482D12AE1872B0010E598 /* RegistrationUserAccountService.swift */; };
 		E1C482D62AE188190010E598 /* AuthenticateUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C482D52AE188190010E598 /* AuthenticateUserAccount.swift */; };
 		E1C482DE2AE194BE0010E598 /* AuthenticateUserAccountMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C482DD2AE194BE0010E598 /* AuthenticateUserAccountMapper.swift */; };
+		E1C482E12AE197860010E598 /* AuthenticateUserAccountMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C482E02AE197860010E598 /* AuthenticateUserAccountMapperTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		E1C482D12AE1872B0010E598 /* RegistrationUserAccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUserAccountService.swift; sourceTree = "<group>"; };
 		E1C482D52AE188190010E598 /* AuthenticateUserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateUserAccount.swift; sourceTree = "<group>"; };
 		E1C482DD2AE194BE0010E598 /* AuthenticateUserAccountMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateUserAccountMapper.swift; sourceTree = "<group>"; };
+		E1C482E02AE197860010E598 /* AuthenticateUserAccountMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateUserAccountMapperTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -319,6 +321,7 @@
 		E1C482D92AE18A1D0010E598 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				E1C482E02AE197860010E598 /* AuthenticateUserAccountMapperTests.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 				E17C0CDE2AE1205C005AAF2F /* XCTestCase+Snapshot.swift in Sources */,
 				E1A5021F2AE152070049C49E /* CacheUserAccountUseCaseTests.swift in Sources */,
 				E17C0CE02AE12087005AAF2F /* UIViewController+Snapshot.swift in Sources */,
+				E1C482E12AE197860010E598 /* AuthenticateUserAccountMapperTests.swift in Sources */,
 				E17C0CDB2AE1201A005AAF2F /* LoginSnapshotTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

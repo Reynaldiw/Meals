@@ -37,6 +37,12 @@ public final class RegistrationViewController: UIViewController {
             newValue ? spinner.startAnimating() : spinner.stopAnimating()
         }
     }
+    
+    public var errorMessage: String? = nil {
+        didSet {
+            errorMessageLabel.text = errorMessage
+        }
+    }
 
     public override func viewDidLoad() {
         super.viewDidLoad()

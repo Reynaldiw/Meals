@@ -38,6 +38,14 @@ final class RegistrationSnapshotTests: XCTestCase {
         assert(snapshot: sut.snapshot(configuration: .iPhone13(style: .light)), named: "REGISTRATION_LOADING_light")
     }
     
+    func test_registrationWithErrorMessage() {
+        let sut = makeSUT()
+        sut.fillAllRequiredFields(true)
+        sut.showErrorMessage("This is multiline\n error message")
+        
+        assert(snapshot: sut.snapshot(configuration: .iPhone13(style: .light)), named: "REGISTRATION_ERROR_MESSAGE_light")
+    }
+    
     //MARK: - Helpers
     
     private func makeSUT() -> RegistrationViewController {
@@ -64,5 +72,9 @@ private extension RegistrationViewController {
     
     func showLoading() {
         isLoading = true
+    }
+    
+    func showErrorMessage(_ message: String) {
+        errorMessage = message
     }
 }

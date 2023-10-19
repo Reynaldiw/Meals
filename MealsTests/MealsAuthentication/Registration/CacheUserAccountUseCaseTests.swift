@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import Meals
 
 struct StoredUserAccount: Equatable {
     let id: UUID
@@ -18,18 +19,6 @@ struct StoredUserAccount: Equatable {
 protocol UserAccountStore {
     func retrieve() throws -> [StoredUserAccount]
     func insert(_ userAccount: StoredUserAccount) throws
-}
-
-struct RegistrationUserAccount {
-    let fullname: String
-    let username: String
-    let password: String
-    
-    init(fullname: String, username: String, password: String) {
-        self.fullname = fullname
-        self.username = username
-        self.password = password
-    }
 }
 
 final class RegistrationUserAccountService {

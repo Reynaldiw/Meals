@@ -31,3 +31,7 @@ public final class LoginViewController: UIViewController {
         loginButton.layer.opacity = isEnable ? 1.0 : 0.5
     }
 }
+
+extension LoginViewController: UITextFieldDelegate {
+    public func textFieldDidChangeSelection(_ textField: UITextField) {}
+}

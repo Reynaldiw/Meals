@@ -25,6 +25,7 @@
 		E1C482C92AE185F90010E598 /* RegistrationUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C482C82AE185F90010E598 /* RegistrationUserAccount.swift */; };
 		E1C482CD2AE186910010E598 /* UserAccountStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C482CC2AE186910010E598 /* UserAccountStore.swift */; };
 		E1C482CF2AE186A80010E598 /* StoredUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C482CE2AE186A80010E598 /* StoredUserAccount.swift */; };
+		E1C482D22AE1872B0010E598 /* RegistrationUserAccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C482D12AE1872B0010E598 /* RegistrationUserAccountService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		E1C482C82AE185F90010E598 /* RegistrationUserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUserAccount.swift; sourceTree = "<group>"; };
 		E1C482CC2AE186910010E598 /* UserAccountStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountStore.swift; sourceTree = "<group>"; };
 		E1C482CE2AE186A80010E598 /* StoredUserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoredUserAccount.swift; sourceTree = "<group>"; };
+		E1C482D12AE1872B0010E598 /* RegistrationUserAccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUserAccountService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +262,7 @@
 		E1C482C62AE185DB0010E598 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
+				E1C482D02AE187200010E598 /* Store */,
 				E1C482C72AE185E50010E598 /* Feature */,
 			);
 			path = Registration;
@@ -280,6 +283,14 @@
 				E1C482CE2AE186A80010E598 /* StoredUserAccount.swift */,
 			);
 			path = "Shared Store";
+			sourceTree = "<group>";
+		};
+		E1C482D02AE187200010E598 /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				E1C482D12AE1872B0010E598 /* RegistrationUserAccountService.swift */,
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -392,6 +403,7 @@
 				E1A502112AE12CFE0049C49E /* RegistrationViewController.swift in Sources */,
 				E1C482CD2AE186910010E598 /* UserAccountStore.swift in Sources */,
 				E17C0CB12AE0E91B005AAF2F /* SceneDelegate.swift in Sources */,
+				E1C482D22AE1872B0010E598 /* RegistrationUserAccountService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

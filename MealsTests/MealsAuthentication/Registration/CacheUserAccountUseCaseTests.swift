@@ -8,42 +8,6 @@
 import XCTest
 import Meals
 
-final class RegistrationUserAccountService {
-    
-    enum Error: Swift.Error {
-        case usernameAlreadyTaken
-    }
-    
-    private let store: UserAccountStore
-    private let userAccountID: () -> UUID
-    private let userAccountCreatedAt: () -> Date
-    
-    init(store: UserAccountStore, userAccountID: @escaping () -> UUID, userAccountCreatedAt: @escaping () -> Date) {
-        self.store = store
-        self.userAccountID = userAccountID
-        self.userAccountCreatedAt = userAccountCreatedAt
-    }
-    
-    func register(_ userAccount: RegistrationUserAccount) throws {
-        do {
-            let cachedUserAccounts = try store.retrieve()
-            let isValid = cachedUserAccounts.filter { $0.username.lowercased() == userAccount.username.lowercased() }.isEmpty == true
-            
-            guard isValid else { throw Error.usernameAlreadyTaken }
-            
-            try store.insert(StoredUserAccount(
-                id: userAccountID(),
-                fullname: userAccount.fullname,
-                username: userAccount.username,
-                password: userAccount.password,
-                createdAt: userAccountCreatedAt()))
-            
-        } catch {
-            throw error
-        }
-    }
-}
-
 final class CacheUserAccountUseCaseTests: XCTestCase {
     
     func test_init_doesNotRetrieveCachedUserAcccountUponCreation() {

@@ -44,7 +44,7 @@ final class RegistrationUserAccountService {
         self.userAccountCreatedAt = userAccountCreatedAt
     }
     
-    func register(_ userAccount: RegistrationUserAccount) {
+    func register(_ userAccount: RegistrationUserAccount) throws {
         do {
             let cachedUserAccounts = try store.retrieve()
             let isValid = cachedUserAccounts.filter { $0.username.lowercased() == userAccount.username.lowercased() }.isEmpty == true
@@ -59,7 +59,7 @@ final class RegistrationUserAccountService {
             }
             
         } catch {
-            
+            throw error
         }
     }
 }
@@ -79,7 +79,7 @@ final class CacheUserAccountUseCaseTests: XCTestCase {
         
         store.completeRetrieval(with: retrievalError)
         
-        sut.register(userAccount)
+        try? sut.register(userAccount)
         
         XCTAssertEqual(store.messages, [.retrieveCacheUserAccount])
     }
@@ -90,7 +90,7 @@ final class CacheUserAccountUseCaseTests: XCTestCase {
 
         store.completeRetrieval(with: [userAccount.stored])
         
-        sut.register(userAccount.registration)
+        try? sut.register(userAccount.registration)
         
         XCTAssertEqual(store.messages, [.retrieveCacheUserAccount])
     }
@@ -103,9 +103,19 @@ final class CacheUserAccountUseCaseTests: XCTestCase {
         
         store.completeRetrieval(with: [])
         
-        sut.register(userAccount.registration)
+        try? sut.register(userAccount.registration)
         
         XCTAssertEqual(store.messages, [.retrieveCacheUserAccount, .insert(userAccount.stored)])
+    }
+    
+    func test_register_deliversErrorOnRetrievalError() {
+        let userAccount = uniqueUser().registration
+        let retrievalError = NSError(domain: "any-error", code: 0)
+        let (sut, store) = makeSUT()
+        
+        store.completeRetrieval(with: retrievalError)
+        
+        XCTAssertThrowsError(try sut.register(userAccount), "Should throw error when request retrieval got error")
     }
     
     //MARK: - Helpers

@@ -17,6 +17,8 @@
 		E17C0CDE2AE1205C005AAF2F /* XCTestCase+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17C0CDD2AE1205C005AAF2F /* XCTestCase+Snapshot.swift */; };
 		E17C0CE02AE12087005AAF2F /* UIViewController+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17C0CDF2AE12087005AAF2F /* UIViewController+Snapshot.swift */; };
 		E1A5020A2AE12B160049C49E /* LoginViewController+SnapshotHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A502092AE12B160049C49E /* LoginViewController+SnapshotHelpers.swift */; };
+		E1A5020E2AE12C3B0049C49E /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1A5020D2AE12C3B0049C49E /* Registration.storyboard */; };
+		E1A502112AE12CFE0049C49E /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A502102AE12CFE0049C49E /* RegistrationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,8 @@
 		E17C0CDD2AE1205C005AAF2F /* XCTestCase+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Snapshot.swift"; sourceTree = "<group>"; };
 		E17C0CDF2AE12087005AAF2F /* UIViewController+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Snapshot.swift"; sourceTree = "<group>"; };
 		E1A502092AE12B160049C49E /* LoginViewController+SnapshotHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+SnapshotHelpers.swift"; sourceTree = "<group>"; };
+		E1A5020D2AE12C3B0049C49E /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
+		E1A502102AE12CFE0049C49E /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 		E17C0CC22AE0F138005AAF2F /* MealsiOS */ = {
 			isa = PBXGroup;
 			children = (
+				E1A5020B2AE12C240049C49E /* Registration UI */,
 				E17C0CC32AE0F142005AAF2F /* Login UI */,
 			);
 			path = MealsiOS;
@@ -168,6 +173,31 @@
 				E1A502092AE12B160049C49E /* LoginViewController+SnapshotHelpers.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E1A5020B2AE12C240049C49E /* Registration UI */ = {
+			isa = PBXGroup;
+			children = (
+				E1A5020F2AE12CEC0049C49E /* Controller */,
+				E1A5020C2AE12C2F0049C49E /* View */,
+			);
+			path = "Registration UI";
+			sourceTree = "<group>";
+		};
+		E1A5020C2AE12C2F0049C49E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E1A5020D2AE12C3B0049C49E /* Registration.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E1A5020F2AE12CEC0049C49E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E1A502102AE12CFE0049C49E /* RegistrationViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E17C0CBB2AE0E91C005AAF2F /* LaunchScreen.storyboard in Resources */,
+				E1A5020E2AE12C3B0049C49E /* Registration.storyboard in Resources */,
 				E17C0CB82AE0E91C005AAF2F /* Assets.xcassets in Resources */,
 				E17C0CC72AE0F228005AAF2F /* Login.storyboard in Resources */,
 			);
@@ -274,6 +305,7 @@
 			files = (
 				E17C0CCA2AE111AA005AAF2F /* LoginViewController.swift in Sources */,
 				E17C0CAF2AE0E91B005AAF2F /* AppDelegate.swift in Sources */,
+				E1A502112AE12CFE0049C49E /* RegistrationViewController.swift in Sources */,
 				E17C0CB12AE0E91B005AAF2F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,6 +19,7 @@
 		E1A5020A2AE12B160049C49E /* LoginViewController+SnapshotHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A502092AE12B160049C49E /* LoginViewController+SnapshotHelpers.swift */; };
 		E1A5020E2AE12C3B0049C49E /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1A5020D2AE12C3B0049C49E /* Registration.storyboard */; };
 		E1A502112AE12CFE0049C49E /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A502102AE12CFE0049C49E /* RegistrationViewController.swift */; };
+		E1A502142AE1468C0049C49E /* RegistrationSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A502132AE1468C0049C49E /* RegistrationSnapshotTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		E1A502092AE12B160049C49E /* LoginViewController+SnapshotHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+SnapshotHelpers.swift"; sourceTree = "<group>"; };
 		E1A5020D2AE12C3B0049C49E /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 		E1A502102AE12CFE0049C49E /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		E1A502132AE1468C0049C49E /* RegistrationSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSnapshotTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 			children = (
 				E17C0CDC2AE12041005AAF2F /* Helpers */,
 				E17C0CD92AE11FED005AAF2F /* Login UI */,
+				E1A502122AE1466A0049C49E /* Registration UI */,
 			);
 			path = MealsiOS;
 			sourceTree = "<group>";
@@ -198,6 +201,14 @@
 				E1A502102AE12CFE0049C49E /* RegistrationViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		E1A502122AE1466A0049C49E /* Registration UI */ = {
+			isa = PBXGroup;
+			children = (
+				E1A502132AE1468C0049C49E /* RegistrationSnapshotTests.swift */,
+			);
+			path = "Registration UI";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,6 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1A502142AE1468C0049C49E /* RegistrationSnapshotTests.swift in Sources */,
 				E1A5020A2AE12B160049C49E /* LoginViewController+SnapshotHelpers.swift in Sources */,
 				E17C0CDE2AE1205C005AAF2F /* XCTestCase+Snapshot.swift in Sources */,
 				E17C0CE02AE12087005AAF2F /* UIViewController+Snapshot.swift in Sources */,

@@ -18,5 +18,17 @@ public final class RegistrationViewController: UIViewController {
 
     public override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configureInitialUI()
+    }
+    
+    private func configureInitialUI() {
+        loadingContainer.isHidden = true
+        updateLoginButtonUIState(isEnable: false)
+    }
+    
+    private func updateLoginButtonUIState(isEnable: Bool) {
+        registerButton.isEnabled = isEnable
+        registerButton.layer.opacity = isEnable ? 1.0 : 0.5
     }
 }

@@ -41,7 +41,7 @@ final class LoginSnapshotTests: XCTestCase {
     func test_loginWithErrorMessage() {
         let sut = makeSUT()
         sut.fillFields(withUsername: "Test username", andPassword: "test password")
-        sut.showErrorMessage("This is an error message")
+        sut.showErrorMessage("This is multiline\n error message")
         
         assert(snapshot: sut.snapshot(configuration: .iPhone13(style: .light)), named: "LOGIN_ERROR_MESSAGE_light")
     }

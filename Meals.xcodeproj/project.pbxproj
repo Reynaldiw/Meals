@@ -18,6 +18,7 @@
 		E17C0CE02AE12087005AAF2F /* UIViewController+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17C0CDF2AE12087005AAF2F /* UIViewController+Snapshot.swift */; };
 		E18F14BB2AE1B90700163139 /* AuthenticateUserAccountStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F14BA2AE1B90700163139 /* AuthenticateUserAccountStore.swift */; };
 		E18F14C12AE1B9F700163139 /* KeychainAuthenticateUserAccountStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F14C02AE1B9F700163139 /* KeychainAuthenticateUserAccountStoreTests.swift */; };
+		E18F14C42AE1C3C900163139 /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F14C32AE1C3C900163139 /* KeychainStore.swift */; };
 		E1A5020A2AE12B160049C49E /* LoginViewController+SnapshotHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A502092AE12B160049C49E /* LoginViewController+SnapshotHelpers.swift */; };
 		E1A5020E2AE12C3B0049C49E /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1A5020D2AE12C3B0049C49E /* Registration.storyboard */; };
 		E1A502112AE12CFE0049C49E /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A502102AE12CFE0049C49E /* RegistrationViewController.swift */; };
@@ -58,6 +59,7 @@
 		E17C0CDF2AE12087005AAF2F /* UIViewController+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Snapshot.swift"; sourceTree = "<group>"; };
 		E18F14BA2AE1B90700163139 /* AuthenticateUserAccountStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateUserAccountStore.swift; sourceTree = "<group>"; };
 		E18F14C02AE1B9F700163139 /* KeychainAuthenticateUserAccountStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainAuthenticateUserAccountStoreTests.swift; sourceTree = "<group>"; };
+		E18F14C32AE1C3C900163139 /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
 		E1A502092AE12B160049C49E /* LoginViewController+SnapshotHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+SnapshotHelpers.swift"; sourceTree = "<group>"; };
 		E1A5020D2AE12C3B0049C49E /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 		E1A502102AE12CFE0049C49E /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
@@ -202,6 +204,14 @@
 			path = "Store Infra";
 			sourceTree = "<group>";
 		};
+		E18F14C22AE1C3B800163139 /* Infra */ = {
+			isa = PBXGroup;
+			children = (
+				E18F14C32AE1C3C900163139 /* KeychainStore.swift */,
+			);
+			path = Infra;
+			sourceTree = "<group>";
+		};
 		E1A502082AE12AE40049C49E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -342,6 +352,7 @@
 		E1C482DC2AE194A30010E598 /* Store */ = {
 			isa = PBXGroup;
 			children = (
+				E18F14C22AE1C3B800163139 /* Infra */,
 				E1C482DD2AE194BE0010E598 /* AuthenticateUserAccountMapper.swift */,
 				E18F14BA2AE1B90700163139 /* AuthenticateUserAccountStore.swift */,
 			);
@@ -454,6 +465,7 @@
 				E17C0CCA2AE111AA005AAF2F /* LoginViewController.swift in Sources */,
 				E1C482CF2AE186A80010E598 /* StoredUserAccount.swift in Sources */,
 				E17C0CAF2AE0E91B005AAF2F /* AppDelegate.swift in Sources */,
+				E18F14C42AE1C3C900163139 /* KeychainStore.swift in Sources */,
 				E1C482C92AE185F90010E598 /* RegistrationUserAccount.swift in Sources */,
 				E18F14BB2AE1B90700163139 /* AuthenticateUserAccountStore.swift in Sources */,
 				E1A502112AE12CFE0049C49E /* RegistrationViewController.swift in Sources */,

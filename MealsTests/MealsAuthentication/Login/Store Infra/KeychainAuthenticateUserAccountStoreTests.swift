@@ -12,6 +12,7 @@ final class KeychainStore {
     
     enum Error: Swift.Error {
         case failedToSave
+        case failedToDelete
     }
     
     private let storeKey: String
@@ -62,6 +63,17 @@ extension KeychainStore {
     }
 }
 
+extension KeychainStore {
+    func delete() throws {
+        let query = [
+            kSecClass: kSecClassGenericPassword,
+            kSecAttrAccount: storeKey
+        ] as [CFString : Any] as CFDictionary
+        
+        guard SecItemDelete(query) == noErr else { throw Error.failedToDelete }
+    }
+}
+
 final class KeychainAuthenticateUserAccountStoreTests: XCTestCase {
     
     func test_save_succeedCacheAGivenValueIntoStore() throws {
@@ -90,6 +102,11 @@ final class KeychainAuthenticateUserAccountStoreTests: XCTestCase {
     
     private func makeSUT(storeKey: String = "keychain.account.store.test.key") -> KeychainStore {
         let sut = KeychainStore(storeKey: storeKey)
+        
+        addTeardownBlock {
+            try? KeychainStore(storeKey: storeKey).delete()
+        }
+        
         return sut
     }
 }

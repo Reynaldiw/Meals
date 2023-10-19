@@ -31,4 +31,15 @@ public final class RegistrationViewController: UIViewController {
         registerButton.isEnabled = isEnable
         registerButton.layer.opacity = isEnable ? 1.0 : 0.5
     }
+    
+    private func extractRegistrationFieldsValue() -> (fullname: String?, username: String?, password: String?) {
+        return (fullnameField.text, usernameField.text, passwordField.text)
+    }
+}
+
+extension RegistrationViewController: UITextFieldDelegate {
+    public func textFieldDidChangeSelection(_ textField: UITextField) {
+        let (fullname, username, password) = extractRegistrationFieldsValue()
+        updateLoginButtonUIState(isEnable: fullname?.isEmpty == false && username?.isEmpty == false && password?.isEmpty == false)
+    }
 }

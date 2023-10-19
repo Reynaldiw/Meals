@@ -7,7 +7,7 @@
 
 import XCTest
 
-struct StoredUserAccount {
+struct StoredUserAccount: Equatable {
     let id: UUID
     let fullname: String
     let username: String
@@ -35,29 +35,49 @@ struct RegistrationUserAccount {
 final class RegistrationUserAccountService {
     
     private let store: UserAccountStore
+    private let userAccountID: () -> UUID
+    private let userAccountCreatedAt: () -> Date
     
-    init(store: UserAccountStore) {
+    init(store: UserAccountStore, userAccountID: @escaping () -> UUID, userAccountCreatedAt: @escaping () -> Date) {
         self.store = store
+        self.userAccountID = userAccountID
+        self.userAccountCreatedAt = userAccountCreatedAt
     }
     
     func register(_ userAccount: RegistrationUserAccount) {
-        _ = try? store.retrieve()
+        do {
+            let cachedUserAccounts = try store.retrieve()
+            let isValid = cachedUserAccounts.filter { $0.username.lowercased() == userAccount.username.lowercased() }.isEmpty == true
+            
+            if isValid {
+                try store.insert(StoredUserAccount(
+                    id: userAccountID(),
+                    fullname: userAccount.fullname,
+                    username: userAccount.username,
+                    password: userAccount.password,
+                    createdAt: userAccountCreatedAt()))
+            }
+            
+        } catch {
+            
+        }
     }
 }
 
 final class CacheUserAccountUseCaseTests: XCTestCase {
     
     func test_init_doesNotRetrieveCachedUserAcccountUponCreation() {
-        let store = UserAccountStoreSpy()
-        let sut = RegistrationUserAccountService(store: store)
-        
+        let (_, store) = makeSUT()
+
         XCTAssertEqual(store.messages, [])
     }
     
     func test_register_doesNotRequestInsertionOnRetrievalError() {
         let userAccount = uniqueUser().registration
-        let store = UserAccountStoreSpy()
-        let sut = RegistrationUserAccountService(store: store)
+        let retrievalError = NSError(domain: "any-error", code: 0)
+        let (sut, store) = makeSUT()
+        
+        store.completeRetrieval(with: retrievalError)
         
         sut.register(userAccount)
         
@@ -66,9 +86,8 @@ final class CacheUserAccountUseCaseTests: XCTestCase {
     
     func test_register_doesNotRequestInsertionOnNonValidUserAccount() {
         let userAccount = uniqueUser()
-        let store = UserAccountStoreSpy()
-        let sut = RegistrationUserAccountService(store: store)
-        
+        let (sut, store) = makeSUT()
+
         store.completeRetrieval(with: [userAccount.stored])
         
         sut.register(userAccount.registration)
@@ -76,7 +95,29 @@ final class CacheUserAccountUseCaseTests: XCTestCase {
         XCTAssertEqual(store.messages, [.retrieveCacheUserAccount])
     }
     
+    func test_register_requestInsertionOnSucceesRetrievalAndValidUserAccount() {
+        let userAccountID = UUID()
+        let userAccountDateCreated = Date()
+        let userAccount = uniqueUser(id: userAccountID, createdAt: userAccountDateCreated)
+        let (sut, store) = makeSUT(userAccountID: { userAccountID }, userAccountCreatedAt: { userAccountDateCreated })
+        
+        store.completeRetrieval(with: [])
+        
+        sut.register(userAccount.registration)
+        
+        XCTAssertEqual(store.messages, [.retrieveCacheUserAccount, .insert(userAccount.stored)])
+    }
+    
     //MARK: - Helpers
+    
+    private func makeSUT(
+        userAccountID: @escaping () -> UUID = UUID.init,
+        userAccountCreatedAt: @escaping () -> Date = Date.init
+    ) -> (sut: RegistrationUserAccountService, store: UserAccountStoreSpy) {
+        let store = UserAccountStoreSpy()
+        let sut = RegistrationUserAccountService(store: store, userAccountID: userAccountID, userAccountCreatedAt: userAccountCreatedAt)
+        return (sut, store)
+    }
     
     private func uniqueUser(id: UUID = UUID(), createdAt date: Date = Date()) -> (registration: RegistrationUserAccount, stored: StoredUserAccount) {
         let registrationUser = anyRegistrationUser()
@@ -92,6 +133,7 @@ final class CacheUserAccountUseCaseTests: XCTestCase {
         
         enum Message: Equatable {
             case retrieveCacheUserAccount
+            case insert(StoredUserAccount)
         }
         
         private(set) var messages: [Message] = []
@@ -103,10 +145,16 @@ final class CacheUserAccountUseCaseTests: XCTestCase {
             return try retrievalResult?.get() ?? []
         }
         
+        func completeRetrieval(with error: Error) {
+            retrievalResult = .failure(error)
+        }
+        
         func completeRetrieval(with userAccounts: [StoredUserAccount]) {
             retrievalResult = .success(userAccounts)
         }
         
-        func insert(_ userAccount: StoredUserAccount) throws {}
+        func insert(_ userAccount: StoredUserAccount) throws {
+            messages.append(.insert(userAccount))
+        }
     }
 }

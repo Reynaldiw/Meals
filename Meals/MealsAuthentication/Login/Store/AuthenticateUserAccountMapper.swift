@@ -13,9 +13,9 @@ public final class AuthenticateUserAccountMapper {
         public let id: UUID
         public let fullname: String
         public let username: String
-        public let createdAt: String
+        public let createdAt: Date
         
-        public init(id: UUID, fullname: String, username: String, createdAt: String) {
+        public init(id: UUID, fullname: String, username: String, createdAt: Date) {
             self.id = id
             self.fullname = fullname
             self.username = username
@@ -30,7 +30,7 @@ public final class AuthenticateUserAccountMapper {
     private init() {}
     
     /// Mapping model `AuthenticateUserAccount` into `Base64-Encoded String`
-    private static func map(_ model: AuthenticateUserAccount) throws -> String {
+    public static func map(_ model: AuthenticateUserAccount) throws -> String {
         let codableModel = CodableAuthenticateUserAccount(
             id: model.id,
             fullname: model.fullname,
@@ -40,7 +40,7 @@ public final class AuthenticateUserAccountMapper {
     }
     
     /// Mapping model `Base64-Encoded String`  into `AuthenticateUserAccount`
-    private static func map(base64EncodedValue value: String) throws -> AuthenticateUserAccount? {
+    public static func map(base64EncodedValue value: String) throws -> AuthenticateUserAccount? {
         guard let data = Data(base64Encoded: value) else { return nil }
         return try JSONDecoder().decode(CodableAuthenticateUserAccount.self, from: data).model
     }

@@ -26,6 +26,7 @@
 		E1C482CD2AE186910010E598 /* UserAccountStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C482CC2AE186910010E598 /* UserAccountStore.swift */; };
 		E1C482CF2AE186A80010E598 /* StoredUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C482CE2AE186A80010E598 /* StoredUserAccount.swift */; };
 		E1C482D22AE1872B0010E598 /* RegistrationUserAccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C482D12AE1872B0010E598 /* RegistrationUserAccountService.swift */; };
+		E1C482D62AE188190010E598 /* AuthenticateUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C482D52AE188190010E598 /* AuthenticateUserAccount.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		E1C482CC2AE186910010E598 /* UserAccountStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountStore.swift; sourceTree = "<group>"; };
 		E1C482CE2AE186A80010E598 /* StoredUserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoredUserAccount.swift; sourceTree = "<group>"; };
 		E1C482D12AE1872B0010E598 /* RegistrationUserAccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUserAccountService.swift; sourceTree = "<group>"; };
+		E1C482D52AE188190010E598 /* AuthenticateUserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateUserAccount.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +257,7 @@
 			children = (
 				E1C482CB2AE186820010E598 /* Shared Store */,
 				E1C482C62AE185DB0010E598 /* Registration */,
+				E1C482D32AE187F50010E598 /* Login */,
 			);
 			path = MealsAuthentication;
 			sourceTree = "<group>";
@@ -291,6 +294,22 @@
 				E1C482D12AE1872B0010E598 /* RegistrationUserAccountService.swift */,
 			);
 			path = Store;
+			sourceTree = "<group>";
+		};
+		E1C482D32AE187F50010E598 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				E1C482D42AE188060010E598 /* Feature */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		E1C482D42AE188060010E598 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				E1C482D52AE188190010E598 /* AuthenticateUserAccount.swift */,
+			);
+			path = Feature;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,6 +423,7 @@
 				E1C482CD2AE186910010E598 /* UserAccountStore.swift in Sources */,
 				E17C0CB12AE0E91B005AAF2F /* SceneDelegate.swift in Sources */,
 				E1C482D22AE1872B0010E598 /* RegistrationUserAccountService.swift in Sources */,
+				E1C482D62AE188190010E598 /* AuthenticateUserAccount.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

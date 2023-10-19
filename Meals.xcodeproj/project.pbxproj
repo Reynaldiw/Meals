@@ -22,6 +22,7 @@
 		E1A502142AE1468C0049C49E /* RegistrationSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A502132AE1468C0049C49E /* RegistrationSnapshotTests.swift */; };
 		E1A502172AE14B910049C49E /* RegistrationViewController+SnapshotHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A502162AE14B910049C49E /* RegistrationViewController+SnapshotHelpers.swift */; };
 		E1A5021F2AE152070049C49E /* CacheUserAccountUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A5021E2AE152070049C49E /* CacheUserAccountUseCaseTests.swift */; };
+		E1C482C92AE185F90010E598 /* RegistrationUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C482C82AE185F90010E598 /* RegistrationUserAccount.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		E1A502132AE1468C0049C49E /* RegistrationSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSnapshotTests.swift; sourceTree = "<group>"; };
 		E1A502162AE14B910049C49E /* RegistrationViewController+SnapshotHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegistrationViewController+SnapshotHelpers.swift"; sourceTree = "<group>"; };
 		E1A5021E2AE152070049C49E /* CacheUserAccountUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheUserAccountUseCaseTests.swift; sourceTree = "<group>"; };
+		E1C482C82AE185F90010E598 /* RegistrationUserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUserAccount.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 		E17C0CAD2AE0E91B005AAF2F /* Meals */ = {
 			isa = PBXGroup;
 			children = (
+				E1C482C52AE185D10010E598 /* MealsAuthentication */,
 				E17C0CC22AE0F138005AAF2F /* MealsiOS */,
 				E17C0CAE2AE0E91B005AAF2F /* AppDelegate.swift */,
 				E17C0CB02AE0E91B005AAF2F /* SceneDelegate.swift */,
@@ -241,6 +244,30 @@
 			path = Registration;
 			sourceTree = "<group>";
 		};
+		E1C482C52AE185D10010E598 /* MealsAuthentication */ = {
+			isa = PBXGroup;
+			children = (
+				E1C482C62AE185DB0010E598 /* Registration */,
+			);
+			path = MealsAuthentication;
+			sourceTree = "<group>";
+		};
+		E1C482C62AE185DB0010E598 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				E1C482C72AE185E50010E598 /* Feature */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
+		E1C482C72AE185E50010E598 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				E1C482C82AE185F90010E598 /* RegistrationUserAccount.swift */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -346,6 +373,7 @@
 			files = (
 				E17C0CCA2AE111AA005AAF2F /* LoginViewController.swift in Sources */,
 				E17C0CAF2AE0E91B005AAF2F /* AppDelegate.swift in Sources */,
+				E1C482C92AE185F90010E598 /* RegistrationUserAccount.swift in Sources */,
 				E1A502112AE12CFE0049C49E /* RegistrationViewController.swift in Sources */,
 				E17C0CB12AE0E91B005AAF2F /* SceneDelegate.swift in Sources */,
 			);

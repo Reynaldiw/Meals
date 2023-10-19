@@ -131,6 +131,17 @@ final class CacheUserAccountUseCaseTests: XCTestCase {
         XCTAssertThrowsError(try sut.register(userAccount.registration), "Should throw error when request retrieval succeed but got non valid user account")
     }
     
+    func test_register_deliversErrorOnInsertionError() {
+        let userAccount = uniqueUser()
+        let insertionError = NSError(domain: "any-error", code: 0)
+        let (sut, store) = makeSUT()
+        
+        store.completeRetrieval(with: [])
+        store.completeInsertion(with: insertionError)
+        
+        XCTAssertThrowsError(try sut.register(userAccount.registration), "Should throw error when request retrieval succeed and valid user account but got error on insertion")
+    }
+    
     //MARK: - Helpers
     
     private func makeSUT(
@@ -162,6 +173,7 @@ final class CacheUserAccountUseCaseTests: XCTestCase {
         private(set) var messages: [Message] = []
         
         private var retrievalResult: Result<[StoredUserAccount], Error>?
+        private var insertionResult: Result<Void, Error>?
         
         func retrieve() throws -> [StoredUserAccount] {
             messages.append(.retrieveCacheUserAccount)
@@ -178,6 +190,11 @@ final class CacheUserAccountUseCaseTests: XCTestCase {
         
         func insert(_ userAccount: StoredUserAccount) throws {
             messages.append(.insert(userAccount))
+            try insertionResult?.get()
+        }
+        
+        func completeInsertion(with error: Error) {
+            insertionResult = .failure(error)
         }
     }
 }

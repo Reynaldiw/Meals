@@ -8,19 +8,6 @@
 import XCTest
 import Meals
 
-struct StoredUserAccount: Equatable {
-    let id: UUID
-    let fullname: String
-    let username: String
-    let password: String
-    let createdAt: Date
-}
-
-protocol UserAccountStore {
-    func retrieve() throws -> [StoredUserAccount]
-    func insert(_ userAccount: StoredUserAccount) throws
-}
-
 final class RegistrationUserAccountService {
     
     enum Error: Swift.Error {

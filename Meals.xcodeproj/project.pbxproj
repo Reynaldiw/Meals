@@ -11,6 +11,7 @@
 		E162B17C2AE341A800E98410 /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162B17B2AE341A800E98410 /* SharedTestHelpers.swift */; };
 		E162B17E2AE3431E00E98410 /* MealsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162B17D2AE3431E00E98410 /* MealsEndpoint.swift */; };
 		E162B1802AE344B900E98410 /* MealsEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162B17F2AE344B900E98410 /* MealsEndpointTests.swift */; };
+		E162B1832AE3465500E98410 /* MealItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162B1822AE3465500E98410 /* MealItemViewModel.swift */; };
 		E162C27C2AE2ADB5008C34A4 /* LoginUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162C27B2AE2ADB5008C34A4 /* LoginUIComposer.swift */; };
 		E162C2802AE2CA59008C34A4 /* ProceedResourcePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162C27F2AE2CA59008C34A4 /* ProceedResourcePresenter.swift */; };
 		E162C2822AE2CA6A008C34A4 /* ProceedResourceSucceedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162C2812AE2CA6A008C34A4 /* ProceedResourceSucceedView.swift */; };
@@ -92,6 +93,7 @@
 		E162B17B2AE341A800E98410 /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
 		E162B17D2AE3431E00E98410 /* MealsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsEndpoint.swift; sourceTree = "<group>"; };
 		E162B17F2AE344B900E98410 /* MealsEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsEndpointTests.swift; sourceTree = "<group>"; };
+		E162B1822AE3465500E98410 /* MealItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealItemViewModel.swift; sourceTree = "<group>"; };
 		E162C27B2AE2ADB5008C34A4 /* LoginUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUIComposer.swift; sourceTree = "<group>"; };
 		E162C27F2AE2CA59008C34A4 /* ProceedResourcePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProceedResourcePresenter.swift; sourceTree = "<group>"; };
 		E162C2812AE2CA6A008C34A4 /* ProceedResourceSucceedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProceedResourceSucceedView.swift; sourceTree = "<group>"; };
@@ -185,6 +187,14 @@
 				E162B1792AE3412F00E98410 /* HTTPURLResponse+StatusCode.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E162B1812AE3463C00E98410 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				E162B1822AE3465500E98410 /* MealItemViewModel.swift */,
+			);
+			path = Presentation;
 			sourceTree = "<group>";
 		};
 		E162C2782AE2AD85008C34A4 /* App */ = {
@@ -340,6 +350,7 @@
 				E162B1782AE3412700E98410 /* Helpers */,
 				E162C2CA2AE33B12008C34A4 /* API */,
 				E162C2C72AE33A90008C34A4 /* Feature */,
+				E162B1812AE3463C00E98410 /* Presentation */,
 			);
 			path = "List Meals";
 			sourceTree = "<group>";
@@ -822,6 +833,7 @@
 				E162C27C2AE2ADB5008C34A4 /* LoginUIComposer.swift in Sources */,
 				E162B17A2AE3412F00E98410 /* HTTPURLResponse+StatusCode.swift in Sources */,
 				E1C482CF2AE186A80010E598 /* StoredUserAccount.swift in Sources */,
+				E162B1832AE3465500E98410 /* MealItemViewModel.swift in Sources */,
 				E162C2822AE2CA6A008C34A4 /* ProceedResourceSucceedView.swift in Sources */,
 				E18F14CC2AE1F2A000163139 /* UserAccountsStore.xcdatamodeld in Sources */,
 				E162C28F2AE2CC17008C34A4 /* WeakRefVirtualProxy.swift in Sources */,

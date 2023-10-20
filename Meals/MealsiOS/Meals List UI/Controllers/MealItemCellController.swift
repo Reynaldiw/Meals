@@ -7,11 +7,6 @@
 
 import UIKit
 
-public struct MealItemViewModel {
-    public let name: String
-    public let category: String
-}
-
 public protocol MealImageCellControllerDelegate {
     func didRequestImage()
     func didCancelRequestImage()

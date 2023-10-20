@@ -17,7 +17,7 @@ public final class RegistrationUserAccountService {
     private let userAccountID: () -> UUID
     private let userAccountCreatedAt: () -> Date
     
-    public init(store: UserAccountStore, userAccountID: @escaping () -> UUID, userAccountCreatedAt: @escaping () -> Date) {
+    public init(store: UserAccountStore, userAccountID: @escaping () -> UUID = UUID.init, userAccountCreatedAt: @escaping () -> Date = Date.init) {
         self.store = store
         self.userAccountID = userAccountID
         self.userAccountCreatedAt = userAccountCreatedAt

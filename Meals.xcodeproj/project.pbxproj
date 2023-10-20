@@ -19,6 +19,9 @@
 		E162C2932AE2CD7E008C34A4 /* CombineHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162C2922AE2CD7E008C34A4 /* CombineHelpers.swift */; };
 		E162C2982AE2CE5E008C34A4 /* RegistrationUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162C2972AE2CE5E008C34A4 /* RegistrationUIComposer.swift */; };
 		E162C29A2AE2CF2D008C34A4 /* RegistrationErrorViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162C2992AE2CF2D008C34A4 /* RegistrationErrorViewAdapter.swift */; };
+		E162C29D2AE2CFB5008C34A4 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162C29C2AE2CFB5008C34A4 /* AuthCoordinator.swift */; };
+		E162C29F2AE2DB25008C34A4 /* NullStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162C29E2AE2DB25008C34A4 /* NullStore.swift */; };
+		E162C2A12AE2DB67008C34A4 /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162C2A02AE2DB67008C34A4 /* AuthError.swift */; };
 		E17C0CAF2AE0E91B005AAF2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17C0CAE2AE0E91B005AAF2F /* AppDelegate.swift */; };
 		E17C0CB12AE0E91B005AAF2F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17C0CB02AE0E91B005AAF2F /* SceneDelegate.swift */; };
 		E17C0CB82AE0E91C005AAF2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E17C0CB72AE0E91C005AAF2F /* Assets.xcassets */; };
@@ -78,6 +81,9 @@
 		E162C2922AE2CD7E008C34A4 /* CombineHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineHelpers.swift; sourceTree = "<group>"; };
 		E162C2972AE2CE5E008C34A4 /* RegistrationUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUIComposer.swift; sourceTree = "<group>"; };
 		E162C2992AE2CF2D008C34A4 /* RegistrationErrorViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationErrorViewAdapter.swift; sourceTree = "<group>"; };
+		E162C29C2AE2CFB5008C34A4 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
+		E162C29E2AE2DB25008C34A4 /* NullStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NullStore.swift; sourceTree = "<group>"; };
+		E162C2A02AE2DB67008C34A4 /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
 		E17C0CAB2AE0E91B005AAF2F /* Meals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E17C0CAE2AE0E91B005AAF2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E17C0CB02AE0E91B005AAF2F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +146,7 @@
 			children = (
 				E162C28D2AE2CC08008C34A4 /* Helpers */,
 				E162C2792AE2AD91008C34A4 /* UI Composer */,
+				E162C29B2AE2CFA6008C34A4 /* Coordinators */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -188,6 +195,7 @@
 			children = (
 				E162C28E2AE2CC17008C34A4 /* WeakRefVirtualProxy.swift */,
 				E162C2922AE2CD7E008C34A4 /* CombineHelpers.swift */,
+				E162C29E2AE2DB25008C34A4 /* NullStore.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -199,6 +207,23 @@
 				E162C2992AE2CF2D008C34A4 /* RegistrationErrorViewAdapter.swift */,
 			);
 			path = Registration;
+			sourceTree = "<group>";
+		};
+		E162C29B2AE2CFA6008C34A4 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				E162C2A22AE2DB76008C34A4 /* Auth */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		E162C2A22AE2DB76008C34A4 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				E162C29C2AE2CFB5008C34A4 /* AuthCoordinator.swift */,
+				E162C2A02AE2DB67008C34A4 /* AuthError.swift */,
+			);
+			path = Auth;
 			sourceTree = "<group>";
 		};
 		E17C0CA22AE0E91B005AAF2F = {
@@ -639,13 +664,16 @@
 				E1A502112AE12CFE0049C49E /* RegistrationViewController.swift in Sources */,
 				E1C482CD2AE186910010E598 /* UserAccountStore.swift in Sources */,
 				E162C2802AE2CA59008C34A4 /* ProceedResourcePresenter.swift in Sources */,
+				E162C29F2AE2DB25008C34A4 /* NullStore.swift in Sources */,
 				E162C2882AE2CB1D008C34A4 /* ProceedResourceErrorViewModel.swift in Sources */,
 				E18F14CE2AE1F54700163139 /* CoreDataUserAccountStore.swift in Sources */,
 				E162C29A2AE2CF2D008C34A4 /* RegistrationErrorViewAdapter.swift in Sources */,
 				E17C0CB12AE0E91B005AAF2F /* SceneDelegate.swift in Sources */,
 				E18F14D22AE1F62900163139 /* ManagedUserAccount.swift in Sources */,
 				E1C482D22AE1872B0010E598 /* RegistrationUserAccountService.swift in Sources */,
+				E162C29D2AE2CFB5008C34A4 /* AuthCoordinator.swift in Sources */,
 				E162C2842AE2CAE2008C34A4 /* ProceedResourceLoadingViewModel.swift in Sources */,
+				E162C2A12AE2DB67008C34A4 /* AuthError.swift in Sources */,
 				E162C2932AE2CD7E008C34A4 /* CombineHelpers.swift in Sources */,
 				E1C482DE2AE194BE0010E598 /* AuthenticateUserAccountMapper.swift in Sources */,
 				E1C482D62AE188190010E598 /* AuthenticateUserAccount.swift in Sources */,

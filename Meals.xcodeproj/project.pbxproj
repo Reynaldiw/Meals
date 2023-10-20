@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		E162B17A2AE3412F00E98410 /* HTTPURLResponse+StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162B1792AE3412F00E98410 /* HTTPURLResponse+StatusCode.swift */; };
 		E162B17C2AE341A800E98410 /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162B17B2AE341A800E98410 /* SharedTestHelpers.swift */; };
+		E162B17E2AE3431E00E98410 /* MealsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162B17D2AE3431E00E98410 /* MealsEndpoint.swift */; };
 		E162C27C2AE2ADB5008C34A4 /* LoginUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162C27B2AE2ADB5008C34A4 /* LoginUIComposer.swift */; };
 		E162C2802AE2CA59008C34A4 /* ProceedResourcePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162C27F2AE2CA59008C34A4 /* ProceedResourcePresenter.swift */; };
 		E162C2822AE2CA6A008C34A4 /* ProceedResourceSucceedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162C2812AE2CA6A008C34A4 /* ProceedResourceSucceedView.swift */; };
@@ -88,6 +89,7 @@
 /* Begin PBXFileReference section */
 		E162B1792AE3412F00E98410 /* HTTPURLResponse+StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+StatusCode.swift"; sourceTree = "<group>"; };
 		E162B17B2AE341A800E98410 /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
+		E162B17D2AE3431E00E98410 /* MealsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsEndpoint.swift; sourceTree = "<group>"; };
 		E162C27B2AE2ADB5008C34A4 /* LoginUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUIComposer.swift; sourceTree = "<group>"; };
 		E162C27F2AE2CA59008C34A4 /* ProceedResourcePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProceedResourcePresenter.swift; sourceTree = "<group>"; };
 		E162C2812AE2CA6A008C34A4 /* ProceedResourceSucceedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProceedResourceSucceedView.swift; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 			isa = PBXGroup;
 			children = (
 				E162C2CB2AE33B46008C34A4 /* MealItemsMapper.swift */,
+				E162B17D2AE3431E00E98410 /* MealsEndpoint.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -848,6 +851,7 @@
 				E162C2C32AE339BA008C34A4 /* UITableView+DequeueCell.swift in Sources */,
 				E162C2932AE2CD7E008C34A4 /* CombineHelpers.swift in Sources */,
 				E1C482DE2AE194BE0010E598 /* AuthenticateUserAccountMapper.swift in Sources */,
+				E162B17E2AE3431E00E98410 /* MealsEndpoint.swift in Sources */,
 				E162C2A72AE2EB99008C34A4 /* HTTPClient.swift in Sources */,
 				E1C482D62AE188190010E598 /* AuthenticateUserAccount.swift in Sources */,
 				E162C2862AE2CAFD008C34A4 /* ProceedResourceLoadingView.swift in Sources */,

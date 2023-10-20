@@ -17,6 +17,8 @@
 		E162C28C2AE2CBA0008C34A4 /* ProceedResourcePresentationAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162C28B2AE2CBA0008C34A4 /* ProceedResourcePresentationAdapter.swift */; };
 		E162C28F2AE2CC17008C34A4 /* WeakRefVirtualProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162C28E2AE2CC17008C34A4 /* WeakRefVirtualProxy.swift */; };
 		E162C2932AE2CD7E008C34A4 /* CombineHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162C2922AE2CD7E008C34A4 /* CombineHelpers.swift */; };
+		E162C2982AE2CE5E008C34A4 /* RegistrationUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162C2972AE2CE5E008C34A4 /* RegistrationUIComposer.swift */; };
+		E162C29A2AE2CF2D008C34A4 /* RegistrationErrorViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162C2992AE2CF2D008C34A4 /* RegistrationErrorViewAdapter.swift */; };
 		E17C0CAF2AE0E91B005AAF2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17C0CAE2AE0E91B005AAF2F /* AppDelegate.swift */; };
 		E17C0CB12AE0E91B005AAF2F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17C0CB02AE0E91B005AAF2F /* SceneDelegate.swift */; };
 		E17C0CB82AE0E91C005AAF2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E17C0CB72AE0E91C005AAF2F /* Assets.xcassets */; };
@@ -74,6 +76,8 @@
 		E162C28B2AE2CBA0008C34A4 /* ProceedResourcePresentationAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProceedResourcePresentationAdapter.swift; sourceTree = "<group>"; };
 		E162C28E2AE2CC17008C34A4 /* WeakRefVirtualProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakRefVirtualProxy.swift; sourceTree = "<group>"; };
 		E162C2922AE2CD7E008C34A4 /* CombineHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineHelpers.swift; sourceTree = "<group>"; };
+		E162C2972AE2CE5E008C34A4 /* RegistrationUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUIComposer.swift; sourceTree = "<group>"; };
+		E162C2992AE2CF2D008C34A4 /* RegistrationErrorViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationErrorViewAdapter.swift; sourceTree = "<group>"; };
 		E17C0CAB2AE0E91B005AAF2F /* Meals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E17C0CAE2AE0E91B005AAF2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E17C0CB02AE0E91B005AAF2F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -143,6 +147,7 @@
 		E162C2792AE2AD91008C34A4 /* UI Composer */ = {
 			isa = PBXGroup;
 			children = (
+				E162C2962AE2CE4E008C34A4 /* Registration */,
 				E162C27A2AE2AD9F008C34A4 /* Login */,
 				E162C28B2AE2CBA0008C34A4 /* ProceedResourcePresentationAdapter.swift */,
 			);
@@ -185,6 +190,15 @@
 				E162C2922AE2CD7E008C34A4 /* CombineHelpers.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E162C2962AE2CE4E008C34A4 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				E162C2972AE2CE5E008C34A4 /* RegistrationUIComposer.swift */,
+				E162C2992AE2CF2D008C34A4 /* RegistrationErrorViewAdapter.swift */,
+			);
+			path = Registration;
 			sourceTree = "<group>";
 		};
 		E17C0CA22AE0E91B005AAF2F = {
@@ -618,6 +632,7 @@
 				E17C0CAF2AE0E91B005AAF2F /* AppDelegate.swift in Sources */,
 				E18F14C42AE1C3C900163139 /* KeychainStore.swift in Sources */,
 				E162C28C2AE2CBA0008C34A4 /* ProceedResourcePresentationAdapter.swift in Sources */,
+				E162C2982AE2CE5E008C34A4 /* RegistrationUIComposer.swift in Sources */,
 				E18F14D62AE271CD00163139 /* ManagedCache.swift in Sources */,
 				E1C482C92AE185F90010E598 /* RegistrationUserAccount.swift in Sources */,
 				E18F14BB2AE1B90700163139 /* AuthenticateUserAccountStore.swift in Sources */,
@@ -626,6 +641,7 @@
 				E162C2802AE2CA59008C34A4 /* ProceedResourcePresenter.swift in Sources */,
 				E162C2882AE2CB1D008C34A4 /* ProceedResourceErrorViewModel.swift in Sources */,
 				E18F14CE2AE1F54700163139 /* CoreDataUserAccountStore.swift in Sources */,
+				E162C29A2AE2CF2D008C34A4 /* RegistrationErrorViewAdapter.swift in Sources */,
 				E17C0CB12AE0E91B005AAF2F /* SceneDelegate.swift in Sources */,
 				E18F14D22AE1F62900163139 /* ManagedUserAccount.swift in Sources */,
 				E1C482D22AE1872B0010E598 /* RegistrationUserAccountService.swift in Sources */,

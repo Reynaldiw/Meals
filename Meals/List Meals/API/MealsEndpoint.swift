@@ -16,10 +16,10 @@ public enum MealsEndpoint {
             var components = URLComponents()
             components.scheme = baseURL.scheme
             components.host = baseURL.host
-            components.path = baseURL.path + "json/v1/1/search.php"
+            components.path = baseURL.path + "/json/v1/1/search.php"
             components.queryItems = [
                 URLQueryItem(name: "f", value: "a")
-            ].compactMap { $0 }
+            ]
             
             return components.url!
         }

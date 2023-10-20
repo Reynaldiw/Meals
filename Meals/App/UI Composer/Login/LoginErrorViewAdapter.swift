@@ -20,7 +20,7 @@ final class LoginErrorViewAdapter: ProceedResourceErrorView {
     }
     
     private static var errorMessagePasswordNotMatch: String {
-        "Incorrect username"
+        "Incorrect password"
     }
     
     func display(_ viewModel: ProceedResourceErrorViewModel) {

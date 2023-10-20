@@ -9,7 +9,7 @@ import CoreData
 import Foundation
 
 public final class CoreDataUserAccountStore {
-    private static let modelName = "UserAccountStore"
+    private static let modelName = "UserAccountsStore"
     private static let model = NSManagedObjectModel.with(name: modelName, in: Bundle(for: CoreDataUserAccountStore.self))
     
     private let container: NSPersistentContainer

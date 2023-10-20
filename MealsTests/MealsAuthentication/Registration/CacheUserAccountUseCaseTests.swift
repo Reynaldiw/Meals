@@ -119,18 +119,8 @@ final class CacheUserAccountUseCaseTests: XCTestCase {
         }
     }
     
-    private func uniqueUser(id: UUID = UUID(), createdAt date: Date = Date()) -> (registration: RegistrationUserAccount, stored: StoredUserAccount) {
-        let registrationUser = anyRegistrationUser()
-        let storedUser = StoredUserAccount(id: id, fullname: registrationUser.fullname, username: registrationUser.username, password: registrationUser.password, createdAt: date)
-        return (registrationUser, storedUser)
-    }
-    
     func anyNSError() -> NSError {
         return NSError(domain: "any error", code: 0)
-    }
-    
-    private func anyRegistrationUser() -> RegistrationUserAccount {
-        RegistrationUserAccount(fullname: "any-fullname", username: "any-username", password: "any-password")
     }
     
     private class UserAccountStoreSpy: UserAccountStore {

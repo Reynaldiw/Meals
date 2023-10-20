@@ -24,9 +24,7 @@ extension CoreDataUserAccountStore: UserAccountStore {
         
         try performSync { context in
             Result {
-                let managedCache = ManagedCache(context: context)
-                var cacheUserAccounts = managedCache.localUserAccounts
-                cacheUserAccounts.append(userAccount)
+                let managedCache = try ManagedCache.newUniqueInstance(in: context)
                 managedCache.userAccounts = ManagedUserAccount.accounts(from: cacheUserAccounts, in: context)
                 
                 try context.save()

@@ -19,6 +19,15 @@ extension ManagedCache {
         return try context.fetch(request).first
     }
     
+    static func deleteCache(in context: NSManagedObjectContext) throws {
+        try find(in: context).map(context.delete).map(context.save)
+    }
+    
+    static func newUniqueInstance(in context: NSManagedObjectContext) throws -> ManagedCache {
+        try deleteCache(in: context)
+        return ManagedCache(context: context)
+    }
+    
     var localUserAccounts: [StoredUserAccount] {
         return userAccounts.compactMap { ($0 as? ManagedUserAccount)?.local }
     }

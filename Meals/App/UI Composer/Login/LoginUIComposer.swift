@@ -28,7 +28,7 @@ public final class LoginUIComposer {
         presentationAdapter.presenter = ProceedResourcePresenter(
             succeedView: WeakRefVirtualProxy(object: loginController),
             loadingView: WeakRefVirtualProxy(object: loginController),
-            errorView: WeakRefVirtualProxy(object: loginController))
+            errorView: LoginErrorViewAdapter(controller: loginController))
         
         return loginController
     }

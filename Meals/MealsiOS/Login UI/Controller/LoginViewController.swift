@@ -75,16 +75,12 @@ public final class LoginViewController: UIViewController {
     }
 }
 
-extension LoginViewController: ProceedResourceSucceedView, ProceedResourceLoadingView, ProceedResourceErrorView {
+extension LoginViewController: ProceedResourceSucceedView, ProceedResourceLoadingView {
     public func succeed() {
         
     }
     
     public func display(_ viewModel: ProceedResourceLoadingViewModel) {
-        
-    }
-    
-    public func display(_ viewModel: ProceedResourceErrorViewModel) {
         
     }
 }

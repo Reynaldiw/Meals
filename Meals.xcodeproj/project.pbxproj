@@ -12,6 +12,11 @@
 		E162B17E2AE3431E00E98410 /* MealsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162B17D2AE3431E00E98410 /* MealsEndpoint.swift */; };
 		E162B1802AE344B900E98410 /* MealsEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162B17F2AE344B900E98410 /* MealsEndpointTests.swift */; };
 		E162B1832AE3465500E98410 /* MealItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162B1822AE3465500E98410 /* MealItemViewModel.swift */; };
+		E162B1882AE3473000E98410 /* LoadResourcePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162B1872AE3473000E98410 /* LoadResourcePresenter.swift */; };
+		E162B18A2AE3475400E98410 /* ResourceLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162B1892AE3475400E98410 /* ResourceLoadingView.swift */; };
+		E162B18C2AE3476700E98410 /* ResourceLoadingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162B18B2AE3476700E98410 /* ResourceLoadingViewModel.swift */; };
+		E162B18E2AE3477C00E98410 /* ResourceErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162B18D2AE3477C00E98410 /* ResourceErrorView.swift */; };
+		E162B1902AE3478A00E98410 /* ResourceErrorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162B18F2AE3478A00E98410 /* ResourceErrorViewModel.swift */; };
 		E162C27C2AE2ADB5008C34A4 /* LoginUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162C27B2AE2ADB5008C34A4 /* LoginUIComposer.swift */; };
 		E162C2802AE2CA59008C34A4 /* ProceedResourcePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162C27F2AE2CA59008C34A4 /* ProceedResourcePresenter.swift */; };
 		E162C2822AE2CA6A008C34A4 /* ProceedResourceSucceedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162C2812AE2CA6A008C34A4 /* ProceedResourceSucceedView.swift */; };
@@ -94,6 +99,11 @@
 		E162B17D2AE3431E00E98410 /* MealsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsEndpoint.swift; sourceTree = "<group>"; };
 		E162B17F2AE344B900E98410 /* MealsEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsEndpointTests.swift; sourceTree = "<group>"; };
 		E162B1822AE3465500E98410 /* MealItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealItemViewModel.swift; sourceTree = "<group>"; };
+		E162B1872AE3473000E98410 /* LoadResourcePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadResourcePresenter.swift; sourceTree = "<group>"; };
+		E162B1892AE3475400E98410 /* ResourceLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceLoadingView.swift; sourceTree = "<group>"; };
+		E162B18B2AE3476700E98410 /* ResourceLoadingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceLoadingViewModel.swift; sourceTree = "<group>"; };
+		E162B18D2AE3477C00E98410 /* ResourceErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceErrorView.swift; sourceTree = "<group>"; };
+		E162B18F2AE3478A00E98410 /* ResourceErrorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceErrorViewModel.swift; sourceTree = "<group>"; };
 		E162C27B2AE2ADB5008C34A4 /* LoginUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUIComposer.swift; sourceTree = "<group>"; };
 		E162C27F2AE2CA59008C34A4 /* ProceedResourcePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProceedResourcePresenter.swift; sourceTree = "<group>"; };
 		E162C2812AE2CA6A008C34A4 /* ProceedResourceSucceedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProceedResourceSucceedView.swift; sourceTree = "<group>"; };
@@ -197,6 +207,18 @@
 			path = Presentation;
 			sourceTree = "<group>";
 		};
+		E162B1862AE3471300E98410 /* Load Resource */ = {
+			isa = PBXGroup;
+			children = (
+				E162B1872AE3473000E98410 /* LoadResourcePresenter.swift */,
+				E162B1892AE3475400E98410 /* ResourceLoadingView.swift */,
+				E162B18B2AE3476700E98410 /* ResourceLoadingViewModel.swift */,
+				E162B18D2AE3477C00E98410 /* ResourceErrorView.swift */,
+				E162B18F2AE3478A00E98410 /* ResourceErrorViewModel.swift */,
+			);
+			path = "Load Resource";
+			sourceTree = "<group>";
+		};
 		E162C2782AE2AD85008C34A4 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,6 +251,7 @@
 		E162C27D2AE2AFCF008C34A4 /* Shared Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				E162B1862AE3471300E98410 /* Load Resource */,
 				E162C27E2AE2AFDC008C34A4 /* Proceed Resource */,
 			);
 			path = "Shared Presentation";
@@ -830,6 +853,7 @@
 				E162C28A2AE2CB34008C34A4 /* ProceedResourceErrorView.swift in Sources */,
 				E162C2C52AE33A21008C34A4 /* UIView+Shimmering.swift in Sources */,
 				E17C0CCA2AE111AA005AAF2F /* LoginViewController.swift in Sources */,
+				E162B1882AE3473000E98410 /* LoadResourcePresenter.swift in Sources */,
 				E162C27C2AE2ADB5008C34A4 /* LoginUIComposer.swift in Sources */,
 				E162B17A2AE3412F00E98410 /* HTTPURLResponse+StatusCode.swift in Sources */,
 				E1C482CF2AE186A80010E598 /* StoredUserAccount.swift in Sources */,
@@ -848,15 +872,18 @@
 				E1A502112AE12CFE0049C49E /* RegistrationViewController.swift in Sources */,
 				E162C2BB2AE3103D008C34A4 /* MealItemCell.swift in Sources */,
 				E1C482CD2AE186910010E598 /* UserAccountStore.swift in Sources */,
+				E162B18E2AE3477C00E98410 /* ResourceErrorView.swift in Sources */,
 				E162C2802AE2CA59008C34A4 /* ProceedResourcePresenter.swift in Sources */,
 				E162C29F2AE2DB25008C34A4 /* NullStore.swift in Sources */,
 				E162C2882AE2CB1D008C34A4 /* ProceedResourceErrorViewModel.swift in Sources */,
 				E18F14CE2AE1F54700163139 /* CoreDataUserAccountStore.swift in Sources */,
 				E162C29A2AE2CF2D008C34A4 /* RegistrationErrorViewAdapter.swift in Sources */,
 				E162C2BE2AE33845008C34A4 /* CellController.swift in Sources */,
+				E162B18C2AE3476700E98410 /* ResourceLoadingViewModel.swift in Sources */,
 				E162C2C92AE33AAD008C34A4 /* MealItem.swift in Sources */,
 				E162C2AD2AE2F026008C34A4 /* AlamofireHTTPClient.swift in Sources */,
 				E162C2B92AE30FE5008C34A4 /* MealsViewController.swift in Sources */,
+				E162B18A2AE3475400E98410 /* ResourceLoadingView.swift in Sources */,
 				E17C0CB12AE0E91B005AAF2F /* SceneDelegate.swift in Sources */,
 				E18F14D22AE1F62900163139 /* ManagedUserAccount.swift in Sources */,
 				E1C482D22AE1872B0010E598 /* RegistrationUserAccountService.swift in Sources */,
@@ -869,6 +896,7 @@
 				E162B17E2AE3431E00E98410 /* MealsEndpoint.swift in Sources */,
 				E162C2A72AE2EB99008C34A4 /* HTTPClient.swift in Sources */,
 				E1C482D62AE188190010E598 /* AuthenticateUserAccount.swift in Sources */,
+				E162B1902AE3478A00E98410 /* ResourceErrorViewModel.swift in Sources */,
 				E162C2862AE2CAFD008C34A4 /* ProceedResourceLoadingView.swift in Sources */,
 				E18F14D42AE26FF600163139 /* CoreDataUserAccountStore+UserAccountStore.swift in Sources */,
 			);

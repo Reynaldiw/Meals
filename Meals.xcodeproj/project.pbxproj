@@ -10,6 +10,7 @@
 		E162B17A2AE3412F00E98410 /* HTTPURLResponse+StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162B1792AE3412F00E98410 /* HTTPURLResponse+StatusCode.swift */; };
 		E162B17C2AE341A800E98410 /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162B17B2AE341A800E98410 /* SharedTestHelpers.swift */; };
 		E162B17E2AE3431E00E98410 /* MealsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162B17D2AE3431E00E98410 /* MealsEndpoint.swift */; };
+		E162B1802AE344B900E98410 /* MealsEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162B17F2AE344B900E98410 /* MealsEndpointTests.swift */; };
 		E162C27C2AE2ADB5008C34A4 /* LoginUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162C27B2AE2ADB5008C34A4 /* LoginUIComposer.swift */; };
 		E162C2802AE2CA59008C34A4 /* ProceedResourcePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162C27F2AE2CA59008C34A4 /* ProceedResourcePresenter.swift */; };
 		E162C2822AE2CA6A008C34A4 /* ProceedResourceSucceedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162C2812AE2CA6A008C34A4 /* ProceedResourceSucceedView.swift */; };
@@ -90,6 +91,7 @@
 		E162B1792AE3412F00E98410 /* HTTPURLResponse+StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+StatusCode.swift"; sourceTree = "<group>"; };
 		E162B17B2AE341A800E98410 /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
 		E162B17D2AE3431E00E98410 /* MealsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsEndpoint.swift; sourceTree = "<group>"; };
+		E162B17F2AE344B900E98410 /* MealsEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsEndpointTests.swift; sourceTree = "<group>"; };
 		E162C27B2AE2ADB5008C34A4 /* LoginUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUIComposer.swift; sourceTree = "<group>"; };
 		E162C27F2AE2CA59008C34A4 /* ProceedResourcePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProceedResourcePresenter.swift; sourceTree = "<group>"; };
 		E162C2812AE2CA6A008C34A4 /* ProceedResourceSucceedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProceedResourceSucceedView.swift; sourceTree = "<group>"; };
@@ -371,6 +373,7 @@
 			isa = PBXGroup;
 			children = (
 				E162C2CF2AE33C98008C34A4 /* MealItemsMapperTests.swift */,
+				E162B17F2AE344B900E98410 /* MealsEndpointTests.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -872,6 +875,7 @@
 				E1A5020A2AE12B160049C49E /* LoginViewController+SnapshotHelpers.swift in Sources */,
 				E17C0CDE2AE1205C005AAF2F /* XCTestCase+Snapshot.swift in Sources */,
 				E1A5021F2AE152070049C49E /* CacheUserAccountUseCaseTests.swift in Sources */,
+				E162B1802AE344B900E98410 /* MealsEndpointTests.swift in Sources */,
 				E18F14DC2AE27D3D00163139 /* UserAccountsCacheTestHelpers.swift in Sources */,
 				E17C0CE02AE12087005AAF2F /* UIViewController+Snapshot.swift in Sources */,
 				E1C482E12AE197860010E598 /* AuthenticateUserAccountMapperTests.swift in Sources */,

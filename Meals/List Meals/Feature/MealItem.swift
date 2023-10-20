@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct MealItem {
+public struct MealItem: Equatable {
     public let id: String
     public let imageURL: URL
     public let name: String

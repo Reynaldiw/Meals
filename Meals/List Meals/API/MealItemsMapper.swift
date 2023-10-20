@@ -36,8 +36,8 @@ public final class MealItemsMapper {
         case invalidData
     }
         
-    public static func map(_ data: Data) throws -> [MealItem] {
-        guard let storedItems = try? JSONDecoder().decode(Root.self, from: data) else {
+    public static func map(_ data: Data, from response: HTTPURLResponse) throws -> [MealItem] {
+        guard response.isOK, let storedItems = try? JSONDecoder().decode(Root.self, from: data) else {
             throw Error.invalidData
         }
         

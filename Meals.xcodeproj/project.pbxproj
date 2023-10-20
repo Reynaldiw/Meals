@@ -26,6 +26,8 @@
 		E18F14D22AE1F62900163139 /* ManagedUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F14D12AE1F62900163139 /* ManagedUserAccount.swift */; };
 		E18F14D42AE26FF600163139 /* CoreDataUserAccountStore+UserAccountStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F14D32AE26FF600163139 /* CoreDataUserAccountStore+UserAccountStore.swift */; };
 		E18F14D62AE271CD00163139 /* ManagedCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F14D52AE271CD00163139 /* ManagedCache.swift */; };
+		E18F14D92AE279C600163139 /* CoreDataUserAccountStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F14D82AE279C600163139 /* CoreDataUserAccountStoreTests.swift */; };
+		E18F14DC2AE27D3D00163139 /* UserAccountsCacheTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F14DB2AE27D3D00163139 /* UserAccountsCacheTestHelpers.swift */; };
 		E1A5020A2AE12B160049C49E /* LoginViewController+SnapshotHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A502092AE12B160049C49E /* LoginViewController+SnapshotHelpers.swift */; };
 		E1A5020E2AE12C3B0049C49E /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1A5020D2AE12C3B0049C49E /* Registration.storyboard */; };
 		E1A502112AE12CFE0049C49E /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A502102AE12CFE0049C49E /* RegistrationViewController.swift */; };
@@ -74,6 +76,8 @@
 		E18F14D12AE1F62900163139 /* ManagedUserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedUserAccount.swift; sourceTree = "<group>"; };
 		E18F14D32AE26FF600163139 /* CoreDataUserAccountStore+UserAccountStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoreDataUserAccountStore+UserAccountStore.swift"; sourceTree = "<group>"; };
 		E18F14D52AE271CD00163139 /* ManagedCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedCache.swift; sourceTree = "<group>"; };
+		E18F14D82AE279C600163139 /* CoreDataUserAccountStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataUserAccountStoreTests.swift; sourceTree = "<group>"; };
+		E18F14DB2AE27D3D00163139 /* UserAccountsCacheTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountsCacheTestHelpers.swift; sourceTree = "<group>"; };
 		E1A502092AE12B160049C49E /* LoginViewController+SnapshotHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+SnapshotHelpers.swift"; sourceTree = "<group>"; };
 		E1A5020D2AE12C3B0049C49E /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 		E1A502102AE12CFE0049C49E /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
@@ -256,6 +260,22 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		E18F14D72AE279A300163139 /* Shared Store Infra */ = {
+			isa = PBXGroup;
+			children = (
+				E18F14D82AE279C600163139 /* CoreDataUserAccountStoreTests.swift */,
+			);
+			path = "Shared Store Infra";
+			sourceTree = "<group>";
+		};
+		E18F14DA2AE27D0A00163139 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E18F14DB2AE27D3D00163139 /* UserAccountsCacheTestHelpers.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		E1A502082AE12AE40049C49E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,6 +329,8 @@
 		E1A5021A2AE1505D0049C49E /* MealsAuthentication */ = {
 			isa = PBXGroup;
 			children = (
+				E18F14DA2AE27D0A00163139 /* Helpers */,
+				E18F14D72AE279A300163139 /* Shared Store Infra */,
 				E1A5021B2AE1506C0049C49E /* Registration */,
 				E1C482D92AE18A1D0010E598 /* Login */,
 			);
@@ -535,9 +557,11 @@
 				E18F14C12AE1B9F700163139 /* KeychainAuthenticateUserAccountStoreTests.swift in Sources */,
 				E1A502142AE1468C0049C49E /* RegistrationSnapshotTests.swift in Sources */,
 				E1A502172AE14B910049C49E /* RegistrationViewController+SnapshotHelpers.swift in Sources */,
+				E18F14D92AE279C600163139 /* CoreDataUserAccountStoreTests.swift in Sources */,
 				E1A5020A2AE12B160049C49E /* LoginViewController+SnapshotHelpers.swift in Sources */,
 				E17C0CDE2AE1205C005AAF2F /* XCTestCase+Snapshot.swift in Sources */,
 				E1A5021F2AE152070049C49E /* CacheUserAccountUseCaseTests.swift in Sources */,
+				E18F14DC2AE27D3D00163139 /* UserAccountsCacheTestHelpers.swift in Sources */,
 				E17C0CE02AE12087005AAF2F /* UIViewController+Snapshot.swift in Sources */,
 				E1C482E12AE197860010E598 /* AuthenticateUserAccountMapperTests.swift in Sources */,
 				E17C0CDB2AE1201A005AAF2F /* LoginSnapshotTests.swift in Sources */,

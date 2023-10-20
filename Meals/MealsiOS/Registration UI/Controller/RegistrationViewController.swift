@@ -56,6 +56,9 @@ public final class RegistrationViewController: UIViewController {
     }
     
     private func configureInitialUI() {
+        usernameField.delegate = self
+        fullnameField.delegate = self
+        passwordField.delegate = self
         loadingContainer.isHidden = true
         updateLoginButtonUIState(isEnable: false)
     }
@@ -68,15 +71,22 @@ public final class RegistrationViewController: UIViewController {
     private func extractRegistrationFieldsValue() -> (fullname: String?, username: String?, password: String?) {
         return (fullnameField.text, usernameField.text, passwordField.text)
     }
+    
+    @IBAction func didTapRegisterButton(_ sender: Any) {
+        let value = extractRegistrationFieldsValue()
+        guard let fullname = value.fullname, let username = value.username, let password = value.password else { return }
+        
+        register?(RegistrationAuthenticationAccount(fullname, username, password))
+    }
 }
 
 extension RegistrationViewController: ProceedResourceLoadingView, ProceedResourceSucceedView {
     public func display(_ viewModel: ProceedResourceLoadingViewModel) {
-        
+        isLoading = viewModel.isLoading
     }
     
     public func succeed() {
-        
+        onSucceedRegistration?()
     }
 }
 

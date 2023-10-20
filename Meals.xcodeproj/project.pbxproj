@@ -35,6 +35,7 @@
 		E162C2C32AE339BA008C34A4 /* UITableView+DequeueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162C2C22AE339BA008C34A4 /* UITableView+DequeueCell.swift */; };
 		E162C2C52AE33A21008C34A4 /* UIView+Shimmering.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162C2C42AE33A21008C34A4 /* UIView+Shimmering.swift */; };
 		E162C2C92AE33AAD008C34A4 /* MealItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162C2C82AE33AAD008C34A4 /* MealItem.swift */; };
+		E162C2CC2AE33B46008C34A4 /* MealItemsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162C2CB2AE33B46008C34A4 /* MealItemsMapper.swift */; };
 		E17C0CAF2AE0E91B005AAF2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17C0CAE2AE0E91B005AAF2F /* AppDelegate.swift */; };
 		E17C0CB12AE0E91B005AAF2F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17C0CB02AE0E91B005AAF2F /* SceneDelegate.swift */; };
 		E17C0CB82AE0E91C005AAF2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E17C0CB72AE0E91C005AAF2F /* Assets.xcassets */; };
@@ -109,6 +110,7 @@
 		E162C2C22AE339BA008C34A4 /* UITableView+DequeueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+DequeueCell.swift"; sourceTree = "<group>"; };
 		E162C2C42AE33A21008C34A4 /* UIView+Shimmering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Shimmering.swift"; sourceTree = "<group>"; };
 		E162C2C82AE33AAD008C34A4 /* MealItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealItem.swift; sourceTree = "<group>"; };
+		E162C2CB2AE33B46008C34A4 /* MealItemsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealItemsMapper.swift; sourceTree = "<group>"; };
 		E17C0CAB2AE0E91B005AAF2F /* Meals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Meals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E17C0CAE2AE0E91B005AAF2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E17C0CB02AE0E91B005AAF2F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -317,6 +319,7 @@
 		E162C2C62AE33A7E008C34A4 /* List Meals */ = {
 			isa = PBXGroup;
 			children = (
+				E162C2CA2AE33B12008C34A4 /* API */,
 				E162C2C72AE33A90008C34A4 /* Feature */,
 			);
 			path = "List Meals";
@@ -328,6 +331,14 @@
 				E162C2C82AE33AAD008C34A4 /* MealItem.swift */,
 			);
 			path = Feature;
+			sourceTree = "<group>";
+		};
+		E162C2CA2AE33B12008C34A4 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				E162C2CB2AE33B46008C34A4 /* MealItemsMapper.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		E17C0CA22AE0E91B005AAF2F = {
@@ -765,6 +776,7 @@
 			files = (
 				E18F14D02AE1F5C200163139 /* CoreDataHelpers.swift in Sources */,
 				E162C2A42AE2DC3B008C34A4 /* LoginErrorViewAdapter.swift in Sources */,
+				E162C2CC2AE33B46008C34A4 /* MealItemsMapper.swift in Sources */,
 				E162C28A2AE2CB34008C34A4 /* ProceedResourceErrorView.swift in Sources */,
 				E162C2C52AE33A21008C34A4 /* UIView+Shimmering.swift in Sources */,
 				E17C0CCA2AE111AA005AAF2F /* LoginViewController.swift in Sources */,

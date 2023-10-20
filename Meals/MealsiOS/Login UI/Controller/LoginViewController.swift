@@ -7,6 +7,8 @@
 
 import UIKit
 
+public typealias LoginAuthenticateUserAccount = (username: String, password: String)
+
 public final class LoginViewController: UIViewController {
     
     @IBOutlet private(set) public var usernameField: UITextField!
@@ -44,6 +46,10 @@ public final class LoginViewController: UIViewController {
             errorMessageLabel.text = errorMessage
         }
     }
+    
+    public var authenticate: ((LoginAuthenticateUserAccount) -> Void)?
+    public var onSucceedAuthenticate: (() -> Void)?
+    public var onRegister: (() -> Void)?
 
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +58,8 @@ public final class LoginViewController: UIViewController {
     }
     
     private func configureInitialUI() {
+        usernameField.delegate = self
+        passwordField.delegate = self
         loadingContainer.isHidden = true
         updateLoginButtonUIState(isEnable: false)
         errorMessageLabel.isHidden = true
@@ -64,6 +72,20 @@ public final class LoginViewController: UIViewController {
     
     private func extractLoginFieldsValue() -> (username: String?, password: String?) {
         return (usernameField.text, passwordField.text)
+    }
+}
+
+extension LoginViewController: ProceedResourceSucceedView, ProceedResourceLoadingView, ProceedResourceErrorView {
+    public func succeed() {
+        
+    }
+    
+    public func display(_ viewModel: ProceedResourceLoadingViewModel) {
+        
+    }
+    
+    public func display(_ viewModel: ProceedResourceErrorViewModel) {
+        
     }
 }
 

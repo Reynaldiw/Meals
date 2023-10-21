@@ -78,6 +78,7 @@
 		E18F14D92AE279C600163139 /* CoreDataUserAccountStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F14D82AE279C600163139 /* CoreDataUserAccountStoreTests.swift */; };
 		E18F14DC2AE27D3D00163139 /* UserAccountsCacheTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F14DB2AE27D3D00163139 /* UserAccountsCacheTestHelpers.swift */; };
 		E194484E2AE4109000D6AFF1 /* AuthenticateUserAccountStoreRemover.swift in Sources */ = {isa = PBXBuildFile; fileRef = E194484D2AE4109000D6AFF1 /* AuthenticateUserAccountStoreRemover.swift */; };
+		E19448502AE4152200D6AFF1 /* AuthUserAccountStoreFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E194484F2AE4152200D6AFF1 /* AuthUserAccountStoreFactory.swift */; };
 		E1A5020A2AE12B160049C49E /* LoginViewController+SnapshotHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A502092AE12B160049C49E /* LoginViewController+SnapshotHelpers.swift */; };
 		E1A5020E2AE12C3B0049C49E /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1A5020D2AE12C3B0049C49E /* Registration.storyboard */; };
 		E1A502112AE12CFE0049C49E /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A502102AE12CFE0049C49E /* RegistrationViewController.swift */; };
@@ -181,6 +182,7 @@
 		E18F14D82AE279C600163139 /* CoreDataUserAccountStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataUserAccountStoreTests.swift; sourceTree = "<group>"; };
 		E18F14DB2AE27D3D00163139 /* UserAccountsCacheTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountsCacheTestHelpers.swift; sourceTree = "<group>"; };
 		E194484D2AE4109000D6AFF1 /* AuthenticateUserAccountStoreRemover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateUserAccountStoreRemover.swift; sourceTree = "<group>"; };
+		E194484F2AE4152200D6AFF1 /* AuthUserAccountStoreFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUserAccountStoreFactory.swift; sourceTree = "<group>"; };
 		E1A502092AE12B160049C49E /* LoginViewController+SnapshotHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+SnapshotHelpers.swift"; sourceTree = "<group>"; };
 		E1A5020D2AE12C3B0049C49E /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 		E1A502102AE12CFE0049C49E /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
@@ -342,6 +344,7 @@
 				E162C28E2AE2CC17008C34A4 /* WeakRefVirtualProxy.swift */,
 				E162C2922AE2CD7E008C34A4 /* CombineHelpers.swift */,
 				E162C29E2AE2DB25008C34A4 /* NullStore.swift */,
+				E194484F2AE4152200D6AFF1 /* AuthUserAccountStoreFactory.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -966,6 +969,7 @@
 				E1C482CD2AE186910010E598 /* UserAccountStore.swift in Sources */,
 				E162B18E2AE3477C00E98410 /* ResourceErrorView.swift in Sources */,
 				E162C2802AE2CA59008C34A4 /* ProceedResourcePresenter.swift in Sources */,
+				E19448502AE4152200D6AFF1 /* AuthUserAccountStoreFactory.swift in Sources */,
 				E162C29F2AE2DB25008C34A4 /* NullStore.swift in Sources */,
 				E162C2882AE2CB1D008C34A4 /* ProceedResourceErrorViewModel.swift in Sources */,
 				E18F14CE2AE1F54700163139 /* CoreDataUserAccountStore.swift in Sources */,

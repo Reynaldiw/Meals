@@ -12,7 +12,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     
     private lazy var authenticateUserAccountStore: AuthenticateUserAccountStoreRetriever = {
-        KeychainStore(storeKey: "authenticate-user-account-store")
+        AuthUserAccountStoreFactory.create()
     }()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {

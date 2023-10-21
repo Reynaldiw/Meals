@@ -16,17 +16,24 @@ public final class MealsViewController: UITableViewController, UITableViewDataSo
     }()
     
     public var onRefresh: (() -> Void)?
+    public var onLogout: (() -> Void)?
     
     public override func viewDidLoad() {
         super.viewDidLoad()
         
         configureTableView()
+        configureLogoutView()
+        
         refresh()
     }
     
     private func configureTableView() {
         dataSource.defaultRowAnimation = .fade
         tableView.dataSource = dataSource
+    }
+    
+    private func configureLogoutView() {
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(didTapLogout))
     }
     
     public func display(_ cellControllers: [CellController]) {
@@ -52,6 +59,11 @@ public final class MealsViewController: UITableViewController, UITableViewDataSo
     
     @IBAction private func refresh() {
         onRefresh?()
+    }
+    
+    @objc
+    private func didTapLogout() {
+        onLogout?()
     }
     
     public override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

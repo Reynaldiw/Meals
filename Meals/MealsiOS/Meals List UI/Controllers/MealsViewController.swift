@@ -7,7 +7,7 @@
 
 import UIKit
 
-public final class MealsViewController: UITableViewController, UITableViewDataSourcePrefetching {
+public final class MealsViewController: UITableViewController, UITableViewDataSourcePrefetching, ResourceLoadingView, ResourceErrorView {
     
     private lazy var dataSource: UITableViewDiffableDataSource<Int, CellController> = {
         .init(tableView: tableView) { tableView, index, controller in
@@ -39,6 +39,15 @@ public final class MealsViewController: UITableViewController, UITableViewDataSo
         } else {
             dataSource.apply(snapshot)
         }
+    }
+    
+    public func display(_ viewModel: ResourceLoadingViewModel) {
+        refreshControl?.update(isRefreshing: viewModel.isLoading)
+    }
+    
+    public func display(_ viewModel: ResourceErrorViewModel) {
+        guard let error = viewModel.error else { return }
+        print("Error ListViewController \(error.localizedDescription)")
     }
     
     @IBAction private func refresh() {

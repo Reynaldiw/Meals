@@ -83,6 +83,9 @@
 		E1A502142AE1468C0049C49E /* RegistrationSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A502132AE1468C0049C49E /* RegistrationSnapshotTests.swift */; };
 		E1A502172AE14B910049C49E /* RegistrationViewController+SnapshotHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A502162AE14B910049C49E /* RegistrationViewController+SnapshotHelpers.swift */; };
 		E1A5021F2AE152070049C49E /* CacheUserAccountUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A5021E2AE152070049C49E /* CacheUserAccountUseCaseTests.swift */; };
+		E1B1B0842AE36DFB003FBCFB /* MealItemDetailUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B1B0832AE36DFB003FBCFB /* MealItemDetailUIComposer.swift */; };
+		E1B1B0862AE36F07003FBCFB /* MealDetailResourceViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B1B0852AE36F07003FBCFB /* MealDetailResourceViewAdapter.swift */; };
+		E1B1B0882AE37077003FBCFB /* MealDetailImageViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B1B0872AE37077003FBCFB /* MealDetailImageViewAdapter.swift */; };
 		E1C482C92AE185F90010E598 /* RegistrationUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C482C82AE185F90010E598 /* RegistrationUserAccount.swift */; };
 		E1C482CD2AE186910010E598 /* UserAccountStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C482CC2AE186910010E598 /* UserAccountStore.swift */; };
 		E1C482CF2AE186A80010E598 /* StoredUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C482CE2AE186A80010E598 /* StoredUserAccount.swift */; };
@@ -182,6 +185,9 @@
 		E1A502162AE14B910049C49E /* RegistrationViewController+SnapshotHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegistrationViewController+SnapshotHelpers.swift"; sourceTree = "<group>"; };
 		E1A5021E2AE152070049C49E /* CacheUserAccountUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheUserAccountUseCaseTests.swift; sourceTree = "<group>"; };
 		E1B1B0812AE364EC003FBCFB /* Meals.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Meals.xctestplan; sourceTree = "<group>"; };
+		E1B1B0832AE36DFB003FBCFB /* MealItemDetailUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealItemDetailUIComposer.swift; sourceTree = "<group>"; };
+		E1B1B0852AE36F07003FBCFB /* MealDetailResourceViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailResourceViewAdapter.swift; sourceTree = "<group>"; };
+		E1B1B0872AE37077003FBCFB /* MealDetailImageViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailImageViewAdapter.swift; sourceTree = "<group>"; };
 		E1C482C82AE185F90010E598 /* RegistrationUserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUserAccount.swift; sourceTree = "<group>"; };
 		E1C482CC2AE186910010E598 /* UserAccountStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountStore.swift; sourceTree = "<group>"; };
 		E1C482CE2AE186A80010E598 /* StoredUserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoredUserAccount.swift; sourceTree = "<group>"; };
@@ -266,6 +272,7 @@
 		E162B1932AE348A700E98410 /* Meals */ = {
 			isa = PBXGroup;
 			children = (
+				E1B1B0822AE36DE4003FBCFB /* Detail */,
 				E162B1942AE348C800E98410 /* MealsUIComposer.swift */,
 				E162B1982AE349CB00E98410 /* MealsViewAdapter.swift */,
 			);
@@ -717,6 +724,16 @@
 			path = Registration;
 			sourceTree = "<group>";
 		};
+		E1B1B0822AE36DE4003FBCFB /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				E1B1B0832AE36DFB003FBCFB /* MealItemDetailUIComposer.swift */,
+				E1B1B0852AE36F07003FBCFB /* MealDetailResourceViewAdapter.swift */,
+				E1B1B0872AE37077003FBCFB /* MealDetailImageViewAdapter.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
 		E1C482C52AE185D10010E598 /* MealsAuthentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -916,6 +933,7 @@
 				E162C28A2AE2CB34008C34A4 /* ProceedResourceErrorView.swift in Sources */,
 				E162C2C52AE33A21008C34A4 /* UIView+Shimmering.swift in Sources */,
 				E17C0CCA2AE111AA005AAF2F /* LoginViewController.swift in Sources */,
+				E1B1B0842AE36DFB003FBCFB /* MealItemDetailUIComposer.swift in Sources */,
 				E162B1882AE3473000E98410 /* LoadResourcePresenter.swift in Sources */,
 				E162C27C2AE2ADB5008C34A4 /* LoginUIComposer.swift in Sources */,
 				E162B17A2AE3412F00E98410 /* HTTPURLResponse+StatusCode.swift in Sources */,
@@ -935,6 +953,7 @@
 				E1C482C92AE185F90010E598 /* RegistrationUserAccount.swift in Sources */,
 				E18F14BB2AE1B90700163139 /* AuthenticateUserAccountStore.swift in Sources */,
 				E1A502112AE12CFE0049C49E /* RegistrationViewController.swift in Sources */,
+				E1B1B0882AE37077003FBCFB /* MealDetailImageViewAdapter.swift in Sources */,
 				E162C2BB2AE3103D008C34A4 /* MealItemCell.swift in Sources */,
 				E1C482CD2AE186910010E598 /* UserAccountStore.swift in Sources */,
 				E162B18E2AE3477C00E98410 /* ResourceErrorView.swift in Sources */,
@@ -956,6 +975,7 @@
 				E18F14D22AE1F62900163139 /* ManagedUserAccount.swift in Sources */,
 				E1C482D22AE1872B0010E598 /* RegistrationUserAccountService.swift in Sources */,
 				E162C29D2AE2CFB5008C34A4 /* AuthCoordinator.swift in Sources */,
+				E1B1B0862AE36F07003FBCFB /* MealDetailResourceViewAdapter.swift in Sources */,
 				E162C2842AE2CAE2008C34A4 /* ProceedResourceLoadingViewModel.swift in Sources */,
 				E162C2A12AE2DB67008C34A4 /* AuthError.swift in Sources */,
 				E162B1922AE3487A00E98410 /* UIImageView+ImageAnimated.swift in Sources */,

@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="79d-f8-wuh" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="620.33333333333337"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="800.33333333333337"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apple Frangipan Tart" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sn1-kO-eZn">
                                                 <rect key="frame" x="16" y="24" width="361" height="21"/>
@@ -87,10 +87,10 @@
                                                 </constraints>
                                             </stackView>
                                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Rq-Lp-Aqg" userLabel="Image Container View">
-                                                <rect key="frame" x="16" y="98" width="361" height="180"/>
+                                                <rect key="frame" x="16" y="98" width="361" height="360"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dO4-eC-r2w">
-                                                        <rect key="frame" x="0.0" y="0.0" width="361" height="180"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="361" height="360"/>
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemGray4Color"/>
@@ -98,7 +98,7 @@
                                                     <constraint firstAttribute="trailing" secondItem="dO4-eC-r2w" secondAttribute="trailing" id="7ZU-WQ-3tt"/>
                                                     <constraint firstItem="dO4-eC-r2w" firstAttribute="top" secondItem="4Rq-Lp-Aqg" secondAttribute="top" id="Bl3-SF-XCq"/>
                                                     <constraint firstAttribute="bottom" secondItem="dO4-eC-r2w" secondAttribute="bottom" id="J0V-aw-445"/>
-                                                    <constraint firstAttribute="width" secondItem="4Rq-Lp-Aqg" secondAttribute="height" multiplier="2: 1" constant="1" id="bXQ-dt-3tI"/>
+                                                    <constraint firstAttribute="width" secondItem="4Rq-Lp-Aqg" secondAttribute="height" multiplier="1: 1" constant="1" id="bXQ-dt-3tI"/>
                                                     <constraint firstItem="dO4-eC-r2w" firstAttribute="leading" secondItem="4Rq-Lp-Aqg" secondAttribute="leading" id="jdr-xO-But"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
@@ -108,14 +108,14 @@
                                                 </userDefinedRuntimeAttributes>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VVP-Jm-0ei" userLabel="Spacer">
-                                                <rect key="frame" x="0.0" y="294" width="393" height="32"/>
+                                                <rect key="frame" x="0.0" y="474" width="393" height="32"/>
                                                 <color key="backgroundColor" systemColor="separatorColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="32" id="q3v-Eh-pmb"/>
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vr9-OY-sG5" userLabel="Instruction">
-                                                <rect key="frame" x="16" y="342" width="361" height="262.33333333333326"/>
+                                                <rect key="frame" x="16" y="522" width="361" height="262.33333333333326"/>
                                                 <string key="text">Motor ini memiliki dimensi panjang 1.980 mm, lebar 750 mm dan tinggi 1.110 mm dengan berat mencapai 182 kg. Kapasitas bensin yang mampu dibawa di dalam tangki mencapai 15 liter sama dengan tipe ABS. Di bagian depan, motor ini menggunakan suspensi   berukuran 38 mm inverted fork. Sedangkan di bagian belakang memakai model horizontal back-link dengan gas charged shock with spring preload. Suspensi belakang ini bisa diatur tingkat kekerasannya. Sehingga pemilik bisa mengaturnya sesuai selera.</string>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <nil key="textColor"/>

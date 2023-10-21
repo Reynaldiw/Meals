@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		E147203A2AE34C7E00BBFA8E /* MealsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14720392AE34C7E00BBFA8E /* MealsCoordinator.swift */; };
 		E147203C2AE34F0A00BBFA8E /* ImageDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E147203B2AE34F0A00BBFA8E /* ImageDataMapper.swift */; };
+		E147203F2AE3593A00BBFA8E /* MealDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E147203E2AE3593A00BBFA8E /* MealDetail.storyboard */; };
+		E14720422AE35EF100BBFA8E /* MealDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14720412AE35EF100BBFA8E /* MealDetailViewController.swift */; };
 		E162B17A2AE3412F00E98410 /* HTTPURLResponse+StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162B1792AE3412F00E98410 /* HTTPURLResponse+StatusCode.swift */; };
 		E162B17C2AE341A800E98410 /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162B17B2AE341A800E98410 /* SharedTestHelpers.swift */; };
 		E162B17E2AE3431E00E98410 /* MealsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162B17D2AE3431E00E98410 /* MealsEndpoint.swift */; };
@@ -102,6 +104,8 @@
 /* Begin PBXFileReference section */
 		E14720392AE34C7E00BBFA8E /* MealsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsCoordinator.swift; sourceTree = "<group>"; };
 		E147203B2AE34F0A00BBFA8E /* ImageDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataMapper.swift; sourceTree = "<group>"; };
+		E147203E2AE3593A00BBFA8E /* MealDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MealDetail.storyboard; sourceTree = "<group>"; };
+		E14720412AE35EF100BBFA8E /* MealDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailViewController.swift; sourceTree = "<group>"; };
 		E162B1792AE3412F00E98410 /* HTTPURLResponse+StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+StatusCode.swift"; sourceTree = "<group>"; };
 		E162B17B2AE341A800E98410 /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
 		E162B17D2AE3431E00E98410 /* MealsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsEndpoint.swift; sourceTree = "<group>"; };
@@ -209,6 +213,22 @@
 				E14720392AE34C7E00BBFA8E /* MealsCoordinator.swift */,
 			);
 			path = Meals;
+			sourceTree = "<group>";
+		};
+		E147203D2AE3592100BBFA8E /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				E147203E2AE3593A00BBFA8E /* MealDetail.storyboard */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		E14720402AE35EDE00BBFA8E /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				E14720412AE35EF100BBFA8E /* MealDetailViewController.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		E162B1782AE3412700E98410 /* Helpers */ = {
@@ -375,6 +395,7 @@
 		E162C2B42AE30222008C34A4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E147203D2AE3592100BBFA8E /* Detail */,
 				E162C2B52AE30332008C34A4 /* Meals.storyboard */,
 				E162C2BA2AE3103D008C34A4 /* MealItemCell.swift */,
 			);
@@ -384,6 +405,7 @@
 		E162C2B72AE30FD7008C34A4 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E14720402AE35EDE00BBFA8E /* Detail */,
 				E162C2B82AE30FE5008C34A4 /* MealsViewController.swift */,
 				E162C2BD2AE33845008C34A4 /* CellController.swift */,
 				E162C2BF2AE33885008C34A4 /* MealItemCellController.swift */,
@@ -861,6 +883,7 @@
 			files = (
 				E162C2B62AE30332008C34A4 /* Meals.storyboard in Resources */,
 				E17C0CBB2AE0E91C005AAF2F /* LaunchScreen.storyboard in Resources */,
+				E147203F2AE3593A00BBFA8E /* MealDetail.storyboard in Resources */,
 				E1A5020E2AE12C3B0049C49E /* Registration.storyboard in Resources */,
 				E17C0CB82AE0E91C005AAF2F /* Assets.xcassets in Resources */,
 				E17C0CC72AE0F228005AAF2F /* Login.storyboard in Resources */,
@@ -881,6 +904,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E14720422AE35EF100BBFA8E /* MealDetailViewController.swift in Sources */,
 				E18F14D02AE1F5C200163139 /* CoreDataHelpers.swift in Sources */,
 				E162C2A42AE2DC3B008C34A4 /* LoginErrorViewAdapter.swift in Sources */,
 				E162C2CC2AE33B46008C34A4 /* MealItemsMapper.swift in Sources */,

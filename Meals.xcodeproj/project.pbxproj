@@ -79,6 +79,7 @@
 		E18F14DC2AE27D3D00163139 /* UserAccountsCacheTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F14DB2AE27D3D00163139 /* UserAccountsCacheTestHelpers.swift */; };
 		E194484E2AE4109000D6AFF1 /* AuthenticateUserAccountStoreRemover.swift in Sources */ = {isa = PBXBuildFile; fileRef = E194484D2AE4109000D6AFF1 /* AuthenticateUserAccountStoreRemover.swift */; };
 		E19448502AE4152200D6AFF1 /* AuthUserAccountStoreFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E194484F2AE4152200D6AFF1 /* AuthUserAccountStoreFactory.swift */; };
+		E19448582AE4212700D6AFF1 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19448572AE4212700D6AFF1 /* Config.swift */; };
 		E1A5020A2AE12B160049C49E /* LoginViewController+SnapshotHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A502092AE12B160049C49E /* LoginViewController+SnapshotHelpers.swift */; };
 		E1A5020E2AE12C3B0049C49E /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1A5020D2AE12C3B0049C49E /* Registration.storyboard */; };
 		E1A502112AE12CFE0049C49E /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1A502102AE12CFE0049C49E /* RegistrationViewController.swift */; };
@@ -183,6 +184,9 @@
 		E18F14DB2AE27D3D00163139 /* UserAccountsCacheTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountsCacheTestHelpers.swift; sourceTree = "<group>"; };
 		E194484D2AE4109000D6AFF1 /* AuthenticateUserAccountStoreRemover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateUserAccountStoreRemover.swift; sourceTree = "<group>"; };
 		E194484F2AE4152200D6AFF1 /* AuthUserAccountStoreFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUserAccountStoreFactory.swift; sourceTree = "<group>"; };
+		E19448542AE41B6900D6AFF1 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		E19448562AE4203C00D6AFF1 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		E19448572AE4212700D6AFF1 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		E1A502092AE12B160049C49E /* LoginViewController+SnapshotHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController+SnapshotHelpers.swift"; sourceTree = "<group>"; };
 		E1A5020D2AE12C3B0049C49E /* Registration.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Registration.storyboard; sourceTree = "<group>"; };
 		E1A502102AE12CFE0049C49E /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
@@ -288,6 +292,7 @@
 		E162C2782AE2AD85008C34A4 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				E19448532AE41B4C00D6AFF1 /* Configuration */,
 				E162C28D2AE2CC08008C34A4 /* Helpers */,
 				E162C2792AE2AD91008C34A4 /* UI Composer */,
 				E162C29B2AE2CFA6008C34A4 /* Coordinators */,
@@ -662,6 +667,16 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		E19448532AE41B4C00D6AFF1 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				E19448542AE41B6900D6AFF1 /* Release.xcconfig */,
+				E19448562AE4203C00D6AFF1 /* Debug.xcconfig */,
+				E19448572AE4212700D6AFF1 /* Config.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 		E1A502082AE12AE40049C49E /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -974,6 +989,7 @@
 				E162C2882AE2CB1D008C34A4 /* ProceedResourceErrorViewModel.swift in Sources */,
 				E18F14CE2AE1F54700163139 /* CoreDataUserAccountStore.swift in Sources */,
 				E162C29A2AE2CF2D008C34A4 /* RegistrationErrorViewAdapter.swift in Sources */,
+				E19448582AE4212700D6AFF1 /* Config.swift in Sources */,
 				E162C2BE2AE33845008C34A4 /* CellController.swift in Sources */,
 				E147203C2AE34F0A00BBFA8E /* ImageDataMapper.swift in Sources */,
 				E162B18C2AE3476700E98410 /* ResourceLoadingViewModel.swift in Sources */,
@@ -1051,6 +1067,7 @@
 /* Begin XCBuildConfiguration section */
 		E17C0CBD2AE0E91C005AAF2F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E19448562AE4203C00D6AFF1 /* Debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1111,6 +1128,7 @@
 		};
 		E17C0CBE2AE0E91C005AAF2F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E19448542AE41B6900D6AFF1 /* Release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1165,6 +1183,7 @@
 		};
 		E17C0CC02AE0E91C005AAF2F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E19448562AE4203C00D6AFF1 /* Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1173,7 +1192,7 @@
 				DEVELOPMENT_TEAM = YKPQ92PAK3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Meals/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Meals;
+				INFOPLIST_KEY_CFBundleDisplayName = "$(BUNDLE_DISPLAY_NAME)";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -1193,6 +1212,7 @@
 		};
 		E17C0CC12AE0E91C005AAF2F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E19448542AE41B6900D6AFF1 /* Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1201,7 +1221,7 @@
 				DEVELOPMENT_TEAM = YKPQ92PAK3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Meals/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Meals;
+				INFOPLIST_KEY_CFBundleDisplayName = "$(BUNDLE_DISPLAY_NAME)";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -1221,6 +1241,7 @@
 		};
 		E17C0CD62AE11FA0005AAF2F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E19448562AE4203C00D6AFF1 /* Debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
@@ -1240,6 +1261,7 @@
 		};
 		E17C0CD72AE11FA0005AAF2F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E19448542AE41B6900D6AFF1 /* Release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;

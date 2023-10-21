@@ -32,10 +32,7 @@ final class MealsViewAdapter: ResourceView {
                 let view = MealItemCellController(
                     viewModel: MealItemViewModel(name: model.name, category: model.category),
                     delegate: adapter,
-                    imageSelection: { [itemSelection] in
-                        itemSelection(model)
-                    },
-                    nextSelection: { [itemSelection] in
+                    selection: { [itemSelection] in
                         itemSelection(model)
                     })
                 

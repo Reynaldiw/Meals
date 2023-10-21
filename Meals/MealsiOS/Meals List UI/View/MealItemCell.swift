@@ -14,18 +14,12 @@ public final class MealItemCell: UITableViewCell {
     @IBOutlet private(set) public var mealImageContainer: UIView!
     @IBOutlet private(set) public var mealImageView: UIImageView!
     @IBOutlet private(set) public var mealNameLabel: UILabel!
-    @IBOutlet private(set) public var nextButton: UIButton!
     
-    var onNext: (() -> Void)?
     var onReuse: (() -> Void)?
     
     public override func prepareForReuse() {
         super.prepareForReuse()
         
         onReuse?()
-    }
-    
-    @IBAction private func nextButtonTapped() {
-        
     }
 }

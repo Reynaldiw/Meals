@@ -15,15 +15,13 @@ public protocol MealImageCellControllerDelegate {
 public final class MealItemCellController: NSObject {
     private let viewModel: MealItemViewModel
     private let delegate: MealImageCellControllerDelegate
-    private let imageSelection: () -> Void
-    private let nextSelection: () -> Void
+    private let selection: () -> Void
     private var cell: MealItemCell?
     
-    public init(viewModel: MealItemViewModel, delegate: MealImageCellControllerDelegate, imageSelection: @escaping () -> Void, nextSelection: @escaping () -> Void) {
+    public init(viewModel: MealItemViewModel, delegate: MealImageCellControllerDelegate, selection: @escaping () -> Void) {
         self.viewModel = viewModel
         self.delegate = delegate
-        self.imageSelection = imageSelection
-        self.nextSelection = nextSelection
+        self.selection = selection
     }
 }
 
@@ -46,7 +44,7 @@ extension MealItemCellController: UITableViewDataSource, UITableViewDelegate, UI
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        nextSelection()
+        selection()
     }
     
     public func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

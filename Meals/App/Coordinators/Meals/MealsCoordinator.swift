@@ -24,10 +24,18 @@ final class MealsCoordinator {
         AlamofireHTTPClient(urlSession: URLSession(configuration: .ephemeral))
     }()
     
-    func start() -> MealsViewController {
+    private lazy var authenticateUserAccountStore: AuthenticateUserAccountStoreRemover = {
+        KeychainStore(storeKey: "authenticate-user-account-store")
+    }()
+    
+    func start(
+        onSucceedLogout: @escaping () -> Void
+    ) -> MealsViewController {
         mealsViewController = MealsUIComposer.mealsComposedWith(
             mealsLoader: loadMeals,
-            logout: {},
+            logout: { [logout] in
+                logout(onSucceedLogout)
+            },
             imageLoader: loadImage(from:),
             selection: showDetail(of:))
             
@@ -69,5 +77,16 @@ final class MealsCoordinator {
             .compactMap { $0.first }
             .subscribe(on: scheduler)
             .eraseToAnyPublisher()
+    }
+    
+    //MARK: - Logout
+    
+    private func logout(onSucceedLogout: () -> Void) {
+        do {
+            try authenticateUserAccountStore.delete()
+            onSucceedLogout()
+        } catch {
+            assertionFailure("Error Deleting Authenticate User Account in Keychain Store, error: \(error)")
+        }
     }
 }

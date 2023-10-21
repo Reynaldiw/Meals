@@ -18,7 +18,7 @@ final class MealsCoordinator {
         attributes: .concurrent
     ).eraseToAnyScheduler()
     
-    private lazy var baseURL = URL(string: "https://www.themealdb.com/api")!
+    private lazy var baseURL = Config.baseURL
     
     private lazy var httpClient: HTTPClient = {
         AlamofireHTTPClient(urlSession: URLSession(configuration: .ephemeral))

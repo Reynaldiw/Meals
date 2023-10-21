@@ -11,6 +11,6 @@ final class AuthUserAccountStoreFactory {
     private init() {}
     
     static func create() -> KeychainStore {
-        KeychainStore(storeKey: "authenticate-user-account-store")
+        KeychainStore(storeKey: Config.authUserAccountStoreKey)
     }
 }

@@ -35,7 +35,7 @@ final class MealsCoordinator {
     
     private func loadMeals() -> AnyPublisher<[MealItem], Error> {
         httpClient
-            .getPublisher(from: MealsEndpoint.get.url(baseURL: baseURL))
+            .getPublisher(from: MealsEndpoint.get().url(baseURL: baseURL))
             .tryMap(MealItemsMapper.map)
             .subscribe(on: scheduler)
             .eraseToAnyPublisher()

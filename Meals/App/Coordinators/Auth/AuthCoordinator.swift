@@ -32,7 +32,7 @@ final class AuthCoordinator {
         }
     }()
     
-    private lazy var authenticateUserAccountStore: AuthenticateUserAccountStore = {
+    private lazy var authenticateUserAccountStore: AuthenticateUserAccountStoreSaver = {
         KeychainStore(storeKey: "authenticate-user-account-store")
     }()
     

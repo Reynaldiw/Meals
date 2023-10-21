@@ -26,7 +26,7 @@ extension UserAccountStore {
 }
 
 public extension Publisher where Output == String {
-    func caching(to cache: AuthenticateUserAccountStore) -> AnyPublisher<Output, Failure> {
+    func caching(to cache: AuthenticateUserAccountStoreSaver) -> AnyPublisher<Output, Failure> {
         handleEvents(receiveOutput: { value in
             cache.saveIgnoringResult(value)
         }).eraseToAnyPublisher()
@@ -67,7 +67,7 @@ public extension HTTPClient {
     }
 }
 
-private extension AuthenticateUserAccountStore {
+private extension AuthenticateUserAccountStoreSaver {
     func saveIgnoringResult(_ value: String) {
         try? save(value)
     }

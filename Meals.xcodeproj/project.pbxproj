@@ -65,7 +65,7 @@
 		E17C0CDB2AE1201A005AAF2F /* LoginSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17C0CDA2AE1201A005AAF2F /* LoginSnapshotTests.swift */; };
 		E17C0CDE2AE1205C005AAF2F /* XCTestCase+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17C0CDD2AE1205C005AAF2F /* XCTestCase+Snapshot.swift */; };
 		E17C0CE02AE12087005AAF2F /* UIViewController+Snapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17C0CDF2AE12087005AAF2F /* UIViewController+Snapshot.swift */; };
-		E18F14BB2AE1B90700163139 /* AuthenticateUserAccountStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F14BA2AE1B90700163139 /* AuthenticateUserAccountStore.swift */; };
+		E18F14BB2AE1B90700163139 /* AuthenticateUserAccountStoreSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F14BA2AE1B90700163139 /* AuthenticateUserAccountStoreSaver.swift */; };
 		E18F14C12AE1B9F700163139 /* KeychainAuthenticateUserAccountStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F14C02AE1B9F700163139 /* KeychainAuthenticateUserAccountStoreTests.swift */; };
 		E18F14C42AE1C3C900163139 /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F14C32AE1C3C900163139 /* KeychainStore.swift */; };
 		E18F14C72AE1EFBF00163139 /* XCTestCase+MemoryLeakTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = E18F14C62AE1EFBF00163139 /* XCTestCase+MemoryLeakTracking.swift */; };
@@ -166,7 +166,7 @@
 		E17C0CDA2AE1201A005AAF2F /* LoginSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSnapshotTests.swift; sourceTree = "<group>"; };
 		E17C0CDD2AE1205C005AAF2F /* XCTestCase+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Snapshot.swift"; sourceTree = "<group>"; };
 		E17C0CDF2AE12087005AAF2F /* UIViewController+Snapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Snapshot.swift"; sourceTree = "<group>"; };
-		E18F14BA2AE1B90700163139 /* AuthenticateUserAccountStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateUserAccountStore.swift; sourceTree = "<group>"; };
+		E18F14BA2AE1B90700163139 /* AuthenticateUserAccountStoreSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateUserAccountStoreSaver.swift; sourceTree = "<group>"; };
 		E18F14C02AE1B9F700163139 /* KeychainAuthenticateUserAccountStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainAuthenticateUserAccountStoreTests.swift; sourceTree = "<group>"; };
 		E18F14C32AE1C3C900163139 /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
 		E18F14C62AE1EFBF00163139 /* XCTestCase+MemoryLeakTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+MemoryLeakTracking.swift"; sourceTree = "<group>"; };
@@ -810,7 +810,7 @@
 			children = (
 				E18F14C22AE1C3B800163139 /* Infra */,
 				E1C482DD2AE194BE0010E598 /* AuthenticateUserAccountMapper.swift */,
-				E18F14BA2AE1B90700163139 /* AuthenticateUserAccountStore.swift */,
+				E18F14BA2AE1B90700163139 /* AuthenticateUserAccountStoreSaver.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -951,7 +951,7 @@
 				E162C2982AE2CE5E008C34A4 /* RegistrationUIComposer.swift in Sources */,
 				E18F14D62AE271CD00163139 /* ManagedCache.swift in Sources */,
 				E1C482C92AE185F90010E598 /* RegistrationUserAccount.swift in Sources */,
-				E18F14BB2AE1B90700163139 /* AuthenticateUserAccountStore.swift in Sources */,
+				E18F14BB2AE1B90700163139 /* AuthenticateUserAccountStoreSaver.swift in Sources */,
 				E1A502112AE12CFE0049C49E /* RegistrationViewController.swift in Sources */,
 				E1B1B0882AE37077003FBCFB /* MealDetailImageViewAdapter.swift in Sources */,
 				E162C2BB2AE3103D008C34A4 /* MealItemCell.swift in Sources */,

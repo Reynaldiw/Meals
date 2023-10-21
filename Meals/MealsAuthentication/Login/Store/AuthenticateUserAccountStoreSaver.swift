@@ -7,6 +7,6 @@
 
 import Foundation
 
-public protocol AuthenticateUserAccountStore {
+public protocol AuthenticateUserAccountStoreSaver {
     func save(_ value: String) throws
 }

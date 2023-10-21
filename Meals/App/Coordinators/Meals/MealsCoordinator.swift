@@ -27,6 +27,7 @@ final class MealsCoordinator {
     func start() -> MealsViewController {
         mealsViewController = MealsUIComposer.mealsComposedWith(
             mealsLoader: loadMeals,
+            logout: {},
             imageLoader: loadImage(from:),
             selection: showDetail(of:))
             

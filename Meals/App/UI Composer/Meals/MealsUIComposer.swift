@@ -15,6 +15,7 @@ public final class MealsUIComposer {
     
     public static func mealsComposedWith(
         mealsLoader: @escaping () -> AnyPublisher<[MealItem], Error>,
+        logout: @escaping () -> Void,
         imageLoader: @escaping (URL) -> AnyPublisher<Data, Error>,
         selection: @escaping (MealItem) -> Void = { _ in }
     ) -> MealsViewController {
@@ -22,6 +23,7 @@ public final class MealsUIComposer {
         
         let mealsController = makeMealsViewController(title: "Meals")
         mealsController.onRefresh = presentationAdapter.loadResource
+        mealsController.onLogout = logout
         
         presentationAdapter.presenter = LoadResourcePresenter(
             resourceView: MealsViewAdapter(

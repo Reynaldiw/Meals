@@ -43,7 +43,7 @@ extension KeychainStore: AuthenticateUserAccountStoreSaver {
     }
 }
 
-extension KeychainStore {
+extension KeychainStore: AuthenticateUserAccountStoreRetriever {
     public func retrieve() throws -> String? {
         let query = [
             kSecClass: kSecClassGenericPassword,

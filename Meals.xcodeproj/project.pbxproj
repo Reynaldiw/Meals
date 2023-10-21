@@ -86,6 +86,7 @@
 		E1B1B0842AE36DFB003FBCFB /* MealItemDetailUIComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B1B0832AE36DFB003FBCFB /* MealItemDetailUIComposer.swift */; };
 		E1B1B0862AE36F07003FBCFB /* MealDetailResourceViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B1B0852AE36F07003FBCFB /* MealDetailResourceViewAdapter.swift */; };
 		E1B1B0882AE37077003FBCFB /* MealDetailImageViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B1B0872AE37077003FBCFB /* MealDetailImageViewAdapter.swift */; };
+		E1B1B08A2AE3E575003FBCFB /* AuthenticateUserAccountStoreRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B1B0892AE3E575003FBCFB /* AuthenticateUserAccountStoreRetriever.swift */; };
 		E1C482C92AE185F90010E598 /* RegistrationUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C482C82AE185F90010E598 /* RegistrationUserAccount.swift */; };
 		E1C482CD2AE186910010E598 /* UserAccountStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C482CC2AE186910010E598 /* UserAccountStore.swift */; };
 		E1C482CF2AE186A80010E598 /* StoredUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C482CE2AE186A80010E598 /* StoredUserAccount.swift */; };
@@ -188,6 +189,7 @@
 		E1B1B0832AE36DFB003FBCFB /* MealItemDetailUIComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealItemDetailUIComposer.swift; sourceTree = "<group>"; };
 		E1B1B0852AE36F07003FBCFB /* MealDetailResourceViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailResourceViewAdapter.swift; sourceTree = "<group>"; };
 		E1B1B0872AE37077003FBCFB /* MealDetailImageViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailImageViewAdapter.swift; sourceTree = "<group>"; };
+		E1B1B0892AE3E575003FBCFB /* AuthenticateUserAccountStoreRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateUserAccountStoreRetriever.swift; sourceTree = "<group>"; };
 		E1C482C82AE185F90010E598 /* RegistrationUserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUserAccount.swift; sourceTree = "<group>"; };
 		E1C482CC2AE186910010E598 /* UserAccountStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountStore.swift; sourceTree = "<group>"; };
 		E1C482CE2AE186A80010E598 /* StoredUserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoredUserAccount.swift; sourceTree = "<group>"; };
@@ -811,6 +813,7 @@
 				E18F14C22AE1C3B800163139 /* Infra */,
 				E1C482DD2AE194BE0010E598 /* AuthenticateUserAccountMapper.swift */,
 				E18F14BA2AE1B90700163139 /* AuthenticateUserAccountStoreSaver.swift */,
+				E1B1B0892AE3E575003FBCFB /* AuthenticateUserAccountStoreRetriever.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -948,6 +951,7 @@
 				E147203A2AE34C7E00BBFA8E /* MealsCoordinator.swift in Sources */,
 				E18F14C42AE1C3C900163139 /* KeychainStore.swift in Sources */,
 				E162C28C2AE2CBA0008C34A4 /* ProceedResourcePresentationAdapter.swift in Sources */,
+				E1B1B08A2AE3E575003FBCFB /* AuthenticateUserAccountStoreRetriever.swift in Sources */,
 				E162C2982AE2CE5E008C34A4 /* RegistrationUIComposer.swift in Sources */,
 				E18F14D62AE271CD00163139 /* ManagedCache.swift in Sources */,
 				E1C482C92AE185F90010E598 /* RegistrationUserAccount.swift in Sources */,

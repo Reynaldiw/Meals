@@ -62,7 +62,7 @@ extension KeychainStore: AuthenticateUserAccountStoreRetriever {
     }
 }
 
-extension KeychainStore {
+extension KeychainStore: AuthenticateUserAccountStoreRemover {
     public func delete() throws {
         let query = [
             kSecClass: kSecClassGenericPassword,

@@ -30,6 +30,7 @@ final class MealsViewAdapter: ResourceView {
                 })
                 
                 let view = MealItemCellController(
+                    window: (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window,
                     viewModel: MealItemViewModel(name: model.name, category: model.category),
                     delegate: adapter,
                     selection: { [itemSelection] in

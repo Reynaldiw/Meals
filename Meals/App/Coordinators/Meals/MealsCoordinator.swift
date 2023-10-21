@@ -10,7 +10,7 @@ import Combine
 
 final class MealsCoordinator {
     
-    private var mealsViewController: MealsViewController?
+    private weak var mealsViewController: MealsViewController?
     
     private lazy var scheduler: AnyDispatchQueueScheduler = DispatchQueue(
         label: "com.reynaldi.meals.infra.queue",

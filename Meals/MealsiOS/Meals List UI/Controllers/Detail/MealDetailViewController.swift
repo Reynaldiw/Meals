@@ -38,6 +38,7 @@ public final class MealDetailViewController: UIViewController {
     }
     
     public var onLoadDetail: (() -> Void)?
+    public var onCancelLoadImage: (() -> Void)?
 
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +47,44 @@ public final class MealDetailViewController: UIViewController {
         onLoadDetail?()
     }
     
+    public func display(_ viewModel: MealItemDetailViewModel) {
+        mealNameLabel.text = viewModel.name
+        mealCategoryLabel.text = viewModel.category
+        mealAreaLabel.text = viewModel.area
+        mealInstructionLabel.text = viewModel.instruction
+        
+        mealContentView.isHidden = false
+    }
+    
     private func configureInitialView() {
         mealContentView.isHidden = true
+    }
+    
+    deinit {
+        onCancelLoadImage?()
+    }
+}
+
+extension MealDetailViewController: ResourceErrorView, ResourceLoadingView {
+    public func display(_ viewModel: ResourceErrorViewModel) {
+        // Do later
+    }
+    
+    public func display(_ viewModel: ResourceLoadingViewModel) {
+        isLoading = viewModel.isLoading
+    }
+}
+
+//MARK: - UIImage State
+
+extension MealDetailViewController: ResourceView {
+    public typealias ResourceViewModel = UIImage
+    
+    public func display(_ viewModel: UIImage) {
+        mealImageView.setImageAnimated(viewModel)
+    }
+    
+    public func displayImageView(_ isLoading: Bool) {
+        mealImageContainer.isShimmering = isLoading
     }
 }

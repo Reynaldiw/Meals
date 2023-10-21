@@ -21,7 +21,7 @@ public final class KeychainStore {
     }
 }
 
-extension KeychainStore: AuthenticateUserAccountStore {
+extension KeychainStore: AuthenticateUserAccountStoreSaver {
     public func save(_ value: String) throws {
         let data = Data(value.utf8)
         

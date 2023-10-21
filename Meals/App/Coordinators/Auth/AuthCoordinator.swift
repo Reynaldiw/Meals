@@ -11,8 +11,8 @@ import Foundation
 
 final class AuthCoordinator {
     
-    private var loginController: LoginViewController?
-    private var registrationController: RegistrationViewController?
+    private weak var loginController: LoginViewController?
+    private weak var registrationController: RegistrationViewController?
     
     private lazy var scheduler: AnyDispatchQueueScheduler = DispatchQueue(
         label: "com.reynaldi.authentication.infra.queue",

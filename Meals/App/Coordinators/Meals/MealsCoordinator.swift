@@ -28,7 +28,7 @@ final class MealsCoordinator {
         mealsViewController = MealsUIComposer.mealsComposedWith(
             mealsLoader: loadMeals,
             imageLoader: loadImage(from:),
-            selection: { _ in })
+            selection: showDetail(of:))
             
         return mealsViewController!
     }
@@ -45,6 +45,27 @@ final class MealsCoordinator {
         httpClient
             .getPublisher(from: url)
             .tryMap(ImageDataMapper.map)
+            .subscribe(on: scheduler)
+            .eraseToAnyPublisher()
+    }
+    
+    //MARK: - Meal Detail
+    
+    private func showDetail(of meal: MealItem) {
+        let detailController = MealItemDetailUIComposer.detailComposedWith(
+            detailLoader: { [loadDetail] in
+                loadDetail(meal)
+            },
+            imageLoader: loadImage(from:))
+        
+        mealsViewController?.show(detailController, sender: self)
+    }
+    
+    private func loadDetail(of meal: MealItem) -> AnyPublisher<MealItem, Error> {
+        httpClient
+            .getPublisher(from: MealsEndpoint.get(mealDetail: meal).url(baseURL: baseURL))
+            .tryMap(MealItemsMapper.map)
+            .compactMap { $0.first }
             .subscribe(on: scheduler)
             .eraseToAnyPublisher()
     }

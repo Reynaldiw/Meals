@@ -50,6 +50,23 @@ public extension RegistrationUserAccountService {
     }
 }
 
+//MARK: - HTTPClient
+public extension HTTPClient {
+    typealias Publisher = AnyPublisher<(Data, HTTPURLResponse), Swift.Error>
+    
+    func getPublisher(from url: URL) -> Publisher {
+        var task: HTTPClientTask?
+        
+        return Deferred {
+            Future { completion in
+                task = self.get(from: url, completion: completion)
+            }
+        }
+        .handleEvents(receiveCancel: { task?.cancel() })
+        .eraseToAnyPublisher()
+    }
+}
+
 private extension AuthenticateUserAccountStore {
     func saveIgnoringResult(_ value: String) {
         try? save(value)

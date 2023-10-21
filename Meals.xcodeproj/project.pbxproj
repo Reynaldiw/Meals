@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E147203A2AE34C7E00BBFA8E /* MealsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14720392AE34C7E00BBFA8E /* MealsCoordinator.swift */; };
+		E147203C2AE34F0A00BBFA8E /* ImageDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E147203B2AE34F0A00BBFA8E /* ImageDataMapper.swift */; };
 		E162B17A2AE3412F00E98410 /* HTTPURLResponse+StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162B1792AE3412F00E98410 /* HTTPURLResponse+StatusCode.swift */; };
 		E162B17C2AE341A800E98410 /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162B17B2AE341A800E98410 /* SharedTestHelpers.swift */; };
 		E162B17E2AE3431E00E98410 /* MealsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162B17D2AE3431E00E98410 /* MealsEndpoint.swift */; };
@@ -98,6 +100,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E14720392AE34C7E00BBFA8E /* MealsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsCoordinator.swift; sourceTree = "<group>"; };
+		E147203B2AE34F0A00BBFA8E /* ImageDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataMapper.swift; sourceTree = "<group>"; };
 		E162B1792AE3412F00E98410 /* HTTPURLResponse+StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+StatusCode.swift"; sourceTree = "<group>"; };
 		E162B17B2AE341A800E98410 /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
 		E162B17D2AE3431E00E98410 /* MealsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsEndpoint.swift; sourceTree = "<group>"; };
@@ -199,6 +203,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E14720382AE34C6A00BBFA8E /* Meals */ = {
+			isa = PBXGroup;
+			children = (
+				E14720392AE34C7E00BBFA8E /* MealsCoordinator.swift */,
+			);
+			path = Meals;
+			sourceTree = "<group>";
+		};
 		E162B1782AE3412700E98410 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -311,6 +323,7 @@
 		E162C29B2AE2CFA6008C34A4 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				E14720382AE34C6A00BBFA8E /* Meals */,
 				E162C2A22AE2DB76008C34A4 /* Auth */,
 			);
 			path = Coordinators;
@@ -329,6 +342,7 @@
 			isa = PBXGroup;
 			children = (
 				E162C2A62AE2EB99008C34A4 /* HTTPClient.swift */,
+				E147203B2AE34F0A00BBFA8E /* ImageDataMapper.swift */,
 			);
 			path = "Shared API";
 			sourceTree = "<group>";
@@ -884,6 +898,7 @@
 				E162C28F2AE2CC17008C34A4 /* WeakRefVirtualProxy.swift in Sources */,
 				E162C2C02AE33885008C34A4 /* MealItemCellController.swift in Sources */,
 				E17C0CAF2AE0E91B005AAF2F /* AppDelegate.swift in Sources */,
+				E147203A2AE34C7E00BBFA8E /* MealsCoordinator.swift in Sources */,
 				E18F14C42AE1C3C900163139 /* KeychainStore.swift in Sources */,
 				E162C28C2AE2CBA0008C34A4 /* ProceedResourcePresentationAdapter.swift in Sources */,
 				E162C2982AE2CE5E008C34A4 /* RegistrationUIComposer.swift in Sources */,
@@ -900,6 +915,7 @@
 				E18F14CE2AE1F54700163139 /* CoreDataUserAccountStore.swift in Sources */,
 				E162C29A2AE2CF2D008C34A4 /* RegistrationErrorViewAdapter.swift in Sources */,
 				E162C2BE2AE33845008C34A4 /* CellController.swift in Sources */,
+				E147203C2AE34F0A00BBFA8E /* ImageDataMapper.swift in Sources */,
 				E162B18C2AE3476700E98410 /* ResourceLoadingViewModel.swift in Sources */,
 				E162C2C92AE33AAD008C34A4 /* MealItem.swift in Sources */,
 				E162B1952AE348C800E98410 /* MealsUIComposer.swift in Sources */,

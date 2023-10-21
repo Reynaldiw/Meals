@@ -12,6 +12,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     
     private let authCoordinator = AuthCoordinator()
+    private let mealsCoordinator = MealsCoordinator()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
@@ -29,9 +30,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     private func makeInitialRootViewController() {
         window?.rootViewController = UINavigationController(
-            rootViewController: authCoordinator.start(onSucceedLogin: {
-                print("Succeed Login")
-            })
+            rootViewController: mealsCoordinator.start()
         )
     }
 }

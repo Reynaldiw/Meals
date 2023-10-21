@@ -25,7 +25,7 @@ final class MealsCoordinator {
     }()
     
     private lazy var authenticateUserAccountStore: AuthenticateUserAccountStoreRemover = {
-        KeychainStore(storeKey: "authenticate-user-account-store")
+        AuthUserAccountStoreFactory.create()
     }()
     
     func start(

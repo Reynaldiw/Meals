@@ -19,16 +19,18 @@ public final class MealItemsMapper {
     private struct StoredMealItem: Decodable {
         
         private enum CodingKeys: String, CodingKey {
-            case idMeal, strCategory, strMeal, strMealThumb
+            case idMeal, strCategory, strMeal, strMealThumb, strArea, strInstructions
         }
         
         let idMeal: String
         let strCategory: String
         let strMeal: String
         let strMealThumb: URL
+        let strArea: String
+        let strInstructions: String
         
         var item: MealItem {
-            MealItem(id: idMeal, imageURL: strMealThumb, name: strMeal, category: strCategory)
+            MealItem(id: idMeal, imageURL: strMealThumb, name: strMeal, category: strCategory, area: strArea, instruction: strInstructions)
         }
     }
     

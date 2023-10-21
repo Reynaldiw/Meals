@@ -75,3 +75,19 @@ extension MealItemCellController: UITableViewDataSource, UITableViewDelegate, UI
         cell = nil
     }
 }
+
+extension MealItemCellController: ResourceView, ResourceLoadingView, ResourceErrorView {
+    public typealias ResourceViewModel = UIImage
+    
+    public func display(_ viewModel: UIImage) {
+        cell?.mealImageView.setImageAnimated(viewModel)
+    }
+    
+    public func display(_ viewModel: ResourceLoadingViewModel) {
+        cell?.mealImageContainer.isShimmering = viewModel.isLoading
+    }
+    
+    public func display(_ viewModel: ResourceErrorViewModel) {
+        cell?.mealImageView.image = UIImage()
+    }
+}

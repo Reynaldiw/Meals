@@ -41,13 +41,17 @@ final class MealItemsMapperTests: XCTestCase {
             id: "any-id",
             imageURL: URL(string: "https://any-url.com")!,
             name: "any-name",
-            category: "any-category")
+            category: "any-category",
+            area: "any-area",
+            instruction: "any-instruction")
         
         let meal2 = makeMeal(
             id: "another-id",
             imageURL: URL(string: "https://another-url.com")!,
             name: "another-name",
-            category: "another-category")
+            category: "another-category",
+            area: "another-area",
+            instruction: "another-instruction")
         
         do {
             let receivedMeals = try MealItemsMapper.map(makeMealValues([meal1.value, meal2.value]), from: HTTPURLResponse(statusCode: 200))
@@ -63,14 +67,18 @@ final class MealItemsMapperTests: XCTestCase {
         id: String,
         imageURL: URL,
         name: String,
-        category: String
+        category: String,
+        area: String,
+        instruction: String
     ) -> (model: MealItem, value: [String: Any]) {
-        let model = MealItem(id: id, imageURL: imageURL, name: name, category: category)
+        let model = MealItem(id: id, imageURL: imageURL, name: name, category: category, area: area, instruction: instruction)
         let value: [String: Any] = [
             "idMeal": id,
             "strMeal": name,
             "strCategory": category,
-            "strMealThumb": imageURL.absoluteString
+            "strMealThumb": imageURL.absoluteString,
+            "strArea": area,
+            "strInstructions": instruction
         ]
         
         return (model, value)

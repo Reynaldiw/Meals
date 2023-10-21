@@ -11,6 +11,7 @@
 		E147203C2AE34F0A00BBFA8E /* ImageDataMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E147203B2AE34F0A00BBFA8E /* ImageDataMapper.swift */; };
 		E147203F2AE3593A00BBFA8E /* MealDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E147203E2AE3593A00BBFA8E /* MealDetail.storyboard */; };
 		E14720422AE35EF100BBFA8E /* MealDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14720412AE35EF100BBFA8E /* MealDetailViewController.swift */; };
+		E14720442AE361A500BBFA8E /* MealItemDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E14720432AE361A500BBFA8E /* MealItemDetailViewModel.swift */; };
 		E162B17A2AE3412F00E98410 /* HTTPURLResponse+StatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162B1792AE3412F00E98410 /* HTTPURLResponse+StatusCode.swift */; };
 		E162B17C2AE341A800E98410 /* SharedTestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162B17B2AE341A800E98410 /* SharedTestHelpers.swift */; };
 		E162B17E2AE3431E00E98410 /* MealsEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E162B17D2AE3431E00E98410 /* MealsEndpoint.swift */; };
@@ -106,6 +107,7 @@
 		E147203B2AE34F0A00BBFA8E /* ImageDataMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataMapper.swift; sourceTree = "<group>"; };
 		E147203E2AE3593A00BBFA8E /* MealDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MealDetail.storyboard; sourceTree = "<group>"; };
 		E14720412AE35EF100BBFA8E /* MealDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailViewController.swift; sourceTree = "<group>"; };
+		E14720432AE361A500BBFA8E /* MealItemDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealItemDetailViewModel.swift; sourceTree = "<group>"; };
 		E162B1792AE3412F00E98410 /* HTTPURLResponse+StatusCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HTTPURLResponse+StatusCode.swift"; sourceTree = "<group>"; };
 		E162B17B2AE341A800E98410 /* SharedTestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedTestHelpers.swift; sourceTree = "<group>"; };
 		E162B17D2AE3431E00E98410 /* MealsEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsEndpoint.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 			isa = PBXGroup;
 			children = (
 				E162B1822AE3465500E98410 /* MealItemViewModel.swift */,
+				E14720432AE361A500BBFA8E /* MealItemDetailViewModel.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -941,6 +944,7 @@
 				E162C2BE2AE33845008C34A4 /* CellController.swift in Sources */,
 				E147203C2AE34F0A00BBFA8E /* ImageDataMapper.swift in Sources */,
 				E162B18C2AE3476700E98410 /* ResourceLoadingViewModel.swift in Sources */,
+				E14720442AE361A500BBFA8E /* MealItemDetailViewModel.swift in Sources */,
 				E162C2C92AE33AAD008C34A4 /* MealItem.swift in Sources */,
 				E162B1952AE348C800E98410 /* MealsUIComposer.swift in Sources */,
 				E162C2AD2AE2F026008C34A4 /* AlamofireHTTPClient.swift in Sources */,

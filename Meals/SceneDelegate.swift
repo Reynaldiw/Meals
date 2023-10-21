@@ -11,6 +11,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
     
+    private lazy var authenticateUserAccountStore: AuthenticateUserAccountStoreRetriever = {
+        KeychainStore(storeKey: "authenticate-user-account-store")
+    }()
+    
     private let authCoordinator = AuthCoordinator()
     private let mealsCoordinator = MealsCoordinator()
 
@@ -28,9 +32,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.makeKeyAndVisible()
     }
     
-    private func makeInitialRootViewController() {
+    private func makeInitialRootViewController() {        
+        let cacheAuthUserAccount = try? authenticateUserAccountStore.retrieve()
         window?.rootViewController = UINavigationController(
-            rootViewController: mealsCoordinator.start()
+            rootViewController: cacheAuthUserAccount == nil ? authCoordinator.start(onSucceedLogin: makeInitialRootViewController) : mealsCoordinator.start()
         )
     }
 }

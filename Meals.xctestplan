@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "8EBC8542-23FF-44B9-A3AC-BDAB836959AB",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Meals.xcodeproj",
+      "identifier" : "E17C0CAA2AE0E91B005AAF2F",
+      "name" : "Meals"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Meals.xcodeproj",
+        "identifier" : "E17C0CCE2AE11FA0005AAF2F",
+        "name" : "MealsTests"
+      }
+    }
+  ],
+  "version" : 1
+}

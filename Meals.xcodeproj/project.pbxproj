@@ -181,6 +181,7 @@
 		E1A502132AE1468C0049C49E /* RegistrationSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationSnapshotTests.swift; sourceTree = "<group>"; };
 		E1A502162AE14B910049C49E /* RegistrationViewController+SnapshotHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RegistrationViewController+SnapshotHelpers.swift"; sourceTree = "<group>"; };
 		E1A5021E2AE152070049C49E /* CacheUserAccountUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheUserAccountUseCaseTests.swift; sourceTree = "<group>"; };
+		E1B1B0812AE364EC003FBCFB /* Meals.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Meals.xctestplan; sourceTree = "<group>"; };
 		E1C482C82AE185F90010E598 /* RegistrationUserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationUserAccount.swift; sourceTree = "<group>"; };
 		E1C482CC2AE186910010E598 /* UserAccountStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountStore.swift; sourceTree = "<group>"; };
 		E1C482CE2AE186A80010E598 /* StoredUserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoredUserAccount.swift; sourceTree = "<group>"; };
@@ -474,6 +475,7 @@
 		E17C0CA22AE0E91B005AAF2F = {
 			isa = PBXGroup;
 			children = (
+				E1B1B0812AE364EC003FBCFB /* Meals.xctestplan */,
 				E17C0CAD2AE0E91B005AAF2F /* Meals */,
 				E17C0CD02AE11FA0005AAF2F /* MealsTests */,
 				E17C0CAC2AE0E91B005AAF2F /* Products */,

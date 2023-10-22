@@ -32,7 +32,7 @@ enum Config {
     
     static let authUserAccountStoreKey: String = {
         guard let key = Config.infoDictionary[Keys.authUserAccountStoreKey.rawValue] as? String else {
-            fatalError("Base URL not set in plist")
+            fatalError("Auth User Account Store Key is not set in plist")
         }
         return key
     }()

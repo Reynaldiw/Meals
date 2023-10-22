@@ -184,6 +184,7 @@ extension MealItemCellController: UITableViewDataSource, UITableViewDelegate, UI
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         cell = tableView.dequeueReusableCell()
         cell?.mealNameLabel.text = viewModel.name
+        cell?.mealCategoryLabel.text = viewModel.category
         cell?.mealImageView.image = nil
         cell?.mealImageContainer.isShimmering = true
         configureImagePinchZoom()
